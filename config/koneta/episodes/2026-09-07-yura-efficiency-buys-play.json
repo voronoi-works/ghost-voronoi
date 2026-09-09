@@ -1,0 +1,70 @@
+{
+  "title": "効率化は、遊ぶための余白を買う",
+  "font_size": 25,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長、自動化で今日の作業"
+        },
+        {
+          "text": "ぜんぶ片付いたよ"
+        }
+      ],
+      "bubble_x": 90,
+      "bubble_y": 20,
+      "target_x": 500,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "確かにね、時間ないと"
+        },
+        {
+          "text": "こういう遊びもできんしな"
+        }
+      ],
+      "bubble_x": 45,
+      "bubble_y": 25,
+      "target_x": 380,
+      "target_y": 220,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "早く終わらせて、"
+        },
+        {
+          "text": "わざわざ面倒なことをする"
+        }
+      ],
+      "bubble_x": 90,
+      "bubble_y": 20,
+      "target_x": 500,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "「窓の星をでかくする"
+        },
+        {
+          "text": "余裕ができました」って、"
+        },
+        {
+          "text": "割と正直なAI活用の成果やなｗ"
+        }
+      ],
+      "bubble_x": 55,
+      "bubble_y": 20,
+      "target_x": 580,
+      "target_y": 360,
+      "tail_side": "auto"
+    }
+  ]
+}
