@@ -796,3 +796,19 @@ ul.tags {
     }
   }
 }
+
+// ============================================================================
+// 🎨 縦スクロール4コマ漫画画像（PC表示幅制限＆中央揃え）
+// ============================================================================
+article {
+  img[src*="attachments/"][src$=".png"] {
+    display: block !important;
+    max-width: 480px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 1.8rem auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
