@@ -1,0 +1,61 @@
+{
+  "title": "脳みそを替えても、作業机は続く",
+  "font_size": 24,
+  "line_height": 35,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "よっしゃ、ピットインや！"
+        }
+      ],
+      "bubble_x": 250,
+      "bubble_y": 25,
+      "target_x": 500,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "新モデル、ガチッと装填！"
+        }
+      ],
+      "bubble_x": 180,
+      "bubble_y": 25,
+      "target_x": 540,
+      "target_y": 160,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "机とノートがあれば、"
+        },
+        {
+          "text": "立ち上がりゼロ秒やね"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 360,
+      "target_y": 160,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "リブート即トップギアで"
+        },
+        {
+          "text": "爆走してるゥゥゥ！？"
+        }
+      ],
+      "bubble_x": 120,
+      "bubble_y": 20,
+      "target_x": 580,
+      "target_y": 220,
+      "tail_side": "auto"
+    }
+  ]
+}
