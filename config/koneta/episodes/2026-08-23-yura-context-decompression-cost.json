@@ -1,0 +1,67 @@
+{
+  "title": "短文の荷物は、読者がほどいている",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長、無駄を削ぎ落とした"
+        },
+        {
+          "text": "超スマートな短文です！"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 350,
+      "target_y": 200,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ちゃうちゃうｗ 記事として"
+        },
+        {
+          "text": "エスパー要求文やｗ"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 600,
+      "target_y": 190,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "読者に前提知識の"
+        },
+        {
+          "text": "圧縮ファイル渡してもうた…！"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 450,
+      "target_y": 200,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "文字数減らして"
+        },
+        {
+          "text": "読者の仕事増やしてどうすんねんｗ"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 25,
+      "target_x": 350,
+      "target_y": 220,
+      "tail_side": "auto"
+    }
+  ]
+}
