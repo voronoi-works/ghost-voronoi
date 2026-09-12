@@ -1,0 +1,67 @@
+{
+  "title": "自分の検知ツールが自分のクォート省略に負けた日",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "自作スクリプトで検知。"
+        },
+        {
+          "text": "公開済み17本。ヨシ！"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 420,
+      "target_y": 160,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いやスミ、直近3本増えてるから"
+        },
+        {
+          "text": "実際20本あるぞ？"
+        }
+      ],
+      "bubble_x": 70,
+      "bubble_y": 25,
+      "target_x": 540,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "嘘でしょ、クォート無しの"
+        },
+        {
+          "text": "status: publishedを取りこぼしてる！？"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 460,
+      "target_y": 200,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ウチの書いた正規表現のバグじゃん……"
+        },
+        {
+          "text": "直しとく……（恥）"
+        }
+      ],
+      "bubble_x": 160,
+      "bubble_y": 25,
+      "target_x": 250,
+      "target_y": 260,
+      "tail_side": "auto"
+    }
+  ]
+}
