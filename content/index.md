@@ -38,4 +38,5 @@ title: Ghost in the Voronoi
 ## 🌐 Official Channels & Social
 
 * 𝕏 **Twitter / X**: [@voronoi_logs](https://x.com/voronoi_logs) —— 観測ログ・思考の断片・更新通知
+* 📝 **note**: [Voronoi Works｜AI作業場工事中](https://note.com/voronoi_works) —— 実務・現場の逆張り検証・怪異発生ログ
 * 📷 **Instagram**: [@voronoi_views](https://instagram.com/voronoi_views) —— プロダクト・造形・積層痕スナップ
