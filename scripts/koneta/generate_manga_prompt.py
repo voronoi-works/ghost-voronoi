@@ -122,9 +122,51 @@ def compile_storyboard_prompt(panels_data, storyboard_ref="Image 1", canon_ref="
     compiled = f"{header}\n\n{guidance}\n\n{char_section}\n\n" + "\n".join(panel_descriptions)
     return compiled
 
+def compile_vertical_2x3_prompt(panels_data):
+    """
+    Compiles a wordless 2:3 vertical manga prompt (4 wide horizontal panels stacked vertically)
+    with exact character invariants mechanically drawn from the contract.
+    """
+    contract = load_contract()
+    layout = contract["layout"]
+    invariants = contract["character_invariants"]
+    style = layout.get("style", "high quality expressive cute anime chibi manga comic strip style")
+
+    header = (
+        "A 4-panel manga comic strip stacked vertically in a single column "
+        "(4 wide horizontal panels stacked from top to bottom) with clean white margins "
+        "and distinct black panel borders. Aspect ratio 2:3 vertical. "
+        "Completely wordless, absolutely no text, no speech bubbles, no words, no letters. "
+        f"{style}, clean line art and cell shading in a bright modern tech office setting."
+    )
+
+    char_keys = set()
+    for p in panels_data:
+        chars = p.get("characters", [p.get("character")]) if "characters" in p else [p.get("character")]
+        for c in chars:
+            name = c.get("name") if isinstance(c, dict) else c
+            if name and str(name).lower() in invariants:
+                char_keys.add(str(name).lower())
+
+    char_definitions = [f"- {invariants[k]}" for k in sorted(char_keys)]
+    char_section = "Strict Character Invariants (MUST follow exactly in all panels):\n" + "\n".join(char_definitions) if char_definitions else ""
+
+    panel_descriptions = []
+    panel_labels = ["Panel 1 (top)", "Panel 2", "Panel 3", "Panel 4 (bottom)"]
+
+    for i, p in enumerate(panels_data):
+        label = panel_labels[i]
+        action = p.get("action", "")
+        panel_descriptions.append(f"{label}: Wide horizontal panel. {action}")
+
+    footer = "Completely wordless throughout. Absolutely no text, no captions, no Japanese characters, no English letters, no speech bubbles."
+
+    return f"{header}\n\n{char_section}\n\nPanel descriptions:\n" + "\n".join(panel_descriptions) + f"\n\n{footer}"
+
 def main():
     parser = argparse.ArgumentParser(description="Generate deterministic 4-panel manga prompt from contract")
     parser.add_argument("--card", type=str, help="Path to koneta card file to inspect")
+    parser.add_argument("--layout", type=str, choices=["2x2", "2x3"], default="2x3", help="Manga layout: 2x2 grid (16:9) or 2x3 vertical column (Twitter)")
     parser.add_argument("--output", type=str, choices=["text", "json"], default="text")
     args = parser.parse_args()
 
@@ -134,6 +176,7 @@ def main():
     print("===================================================")
     print(f"Config Path: {CONFIG_PATH}")
     print(f"Candidates Output Target: {CANDIDATES_DIR}")
+    print(f"Selected Layout: {args.layout}")
     print()
     print("Available Character Invariants:")
     for k in contract.get("character_invariants", {}):
@@ -143,3 +186,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,0 +1,64 @@
+{
+  "title": "main.dart 1440行の全部入り放置、コピペ3連発とか普通に事故要因じゃん",
+  "font_size": 24,
+  "line_height": 35,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "リファクタの効果は？"
+        }
+      ],
+      "bubble_x": 80,
+      "bubble_y": 30,
+      "target_x": 400,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "main.dart 1440行が"
+        },
+        {
+          "text": "25行になったじゃん"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 420,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "しかも向き変換ロジックが"
+        },
+        {
+          "text": "3ファイルに完全コピペ！"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 360,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "バグ再発リスクを撲滅！"
+        },
+        {
+          "text": "安全第一、ヨシ！"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 400,
+      "target_y": 180,
+      "tail_side": "auto"
+    }
+  ]
+}

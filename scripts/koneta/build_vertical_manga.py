@@ -171,7 +171,8 @@ def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="au
     elif tail_side == "right":
         ax = bx + bw
         ay = max(by + r + 20, min(by + bh - r - 20, target_y))
-        angle = math.atan2(target_y - ay, target_x - ax)
+        eff_tx = max(ax + 10, target_x)
+        angle = math.atan2(target_y - ay, eff_tx - ax)
         tip_x = ax + tail_len * math.cos(angle)
         tip_y = ay + tail_len * math.sin(angle)
 
@@ -196,9 +197,11 @@ def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="au
     elif tail_side == "left":
         ax = bx
         ay = max(by + r + 20, min(by + bh - r - 20, target_y))
-        angle = math.atan2(target_y - ay, target_x - ax)
+        eff_tx = min(ax - 10, target_x)
+        angle = math.atan2(target_y - ay, eff_tx - ax)
         tip_x = ax + tail_len * math.cos(angle)
         tip_y = ay + tail_len * math.sin(angle)
+
 
         rw = 12
         base_top = ay - rw
@@ -376,9 +379,130 @@ def rasterize_svg(svg_path, png_path, canvas_w, canvas_h):
     return True
 
 
-def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_path=None):
+def crop_panels_from_2x3(raw_image_path):
+    """Crops a 2:3 vertical single-column 4-panel raw image into 4 wide panels."""
+    img = Image.open(raw_image_path).convert("RGB")
+    w, h = img.size
+    arr = np.array(img.convert('L'))
+
+    # Horizontal border detection
+    col_means = arr.mean(axis=0)
+    left_border = [x for x in range(int(w * 0.12)) if col_means[x] < 80]
+    right_border = [x for x in range(int(w * 0.88), w) if col_means[x] < 80]
+
+    min_x = max(left_border) + 3 if left_border else int(w * 0.02)
+    max_x = min(right_border) - 3 if right_border else int(w * 0.98)
+
+    # Vertical cuts between panels
+    row_means = arr.mean(axis=1)
+    cuts = []
+    for expected_pct in [0.025, 0.27, 0.52, 0.76, 0.98]:
+        center = int(h * expected_pct)
+        window = range(max(0, center - 40), min(h, center + 40))
+        min_y = min(window, key=lambda y: row_means[y])
+        cuts.append(min_y)
+
+    b64_list = []
+    from io import BytesIO
+    for i in range(4):
+        top = cuts[i] + 4
+        bot = cuts[i + 1] - 4
+        cropped = img.crop((min_x, top, max_x, bot))
+        buf = BytesIO()
+        cropped.save(buf, format="PNG")
+        b64 = f"data:image/png;base64,{base64.b64encode(buf.getvalue()).decode('ascii')}"
+        b64_list.append(b64)
+
+    return b64_list
+
+
+def build_2x3_fullwidth_manga_svg(b64_list, episode_spec):
+    """
+    Renders standard 2:3 aspect ratio (1200x1800) 4-panel vertical manga
+    using full-width horizontal panels (1128x417) without side banner.
+    """
+    canvas_w = 1200
+    canvas_h = 1800
+
+    margin_x = 36
+    margin_y = 36
+    gutter_y = 20
+
+    panel_w = canvas_w - (margin_x * 2) # 1128px
+    avail_h = canvas_h - (margin_y * 2) - (gutter_y * 3) # 1668px
+    panel_h = int(avail_h / 4) # 417px
+
+    panels_dialogue = episode_spec.get("panels", [])
+
+    svg_panels = []
+    defs_clips = []
+
+    for i in range(4):
+        px = margin_x
+        py = margin_y + i * (panel_h + gutter_y)
+        pw = panel_w
+        ph = panel_h
+
+        d_spec = panels_dialogue[i] if i < len(panels_dialogue) else {}
+        lines = d_spec.get("lines", [])
+        font_size = d_spec.get("font_size", 22)
+        line_height = d_spec.get("line_height", 34)
+
+        bx = px + d_spec.get("bx", 30)
+        by = py + d_spec.get("by", 20)
+        tx = px + d_spec.get("tx", 400)
+        ty = py + d_spec.get("ty", 200)
+        tail_side = d_spec.get("tail", "auto")
+
+        bubble_markup, _, _ = generate_speech_bubble(
+            lines, bx, by, tx, ty,
+            tail_side=tail_side, tail_len=26, radius=16,
+            font_size=font_size, line_height=line_height
+        )
+
+        defs_clips.append(f'<clipPath id="p{i}-clip"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="14" /></clipPath>')
+
+        panel_markup = f"""
+  <!-- Panel {i+1} -->
+  <g id="panel-{i+1}">
+    <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="14" fill="#ffffff" />
+    <g clip-path="url(#p{i}-clip)">
+      <image href="{b64_list[i]}" x="{px}" y="{py}" width="{pw}" height="{ph}" preserveAspectRatio="xMidYMid slice" />
+    </g>
+    <rect class="panel-border" x="{px}" y="{py}" width="{pw}" height="{ph}" rx="14" />
+    {bubble_markup}
+    <!-- Number Badge -->
+    <circle cx="{px + 28}" cy="{py + 28}" r="16" fill="#0f172a" />
+    <text x="{px + 28}" y="{py + 34}" class="badge" text-anchor="middle">{i+1}</text>
+  </g>"""
+        svg_panels.append(panel_markup)
+
+    defs_clips_str = "\n    ".join(defs_clips)
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {canvas_w} {canvas_h}" width="{canvas_w}" height="{canvas_h}">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&amp;display=swap');
+      .panel-border {{ fill: none; stroke: #0f172a; stroke-width: 5px; stroke-linejoin: round; }}
+      .bubble-fill {{ fill: #ffffff; stroke: #0f172a; stroke-width: 4.5px; stroke-linejoin: round; }}
+      .text-body {{ font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif; font-weight: 900; fill: #0f172a; }}
+      .badge {{ font-family: 'Noto Sans JP', sans-serif; font-size: 18px; font-weight: 900; fill: #ffffff; }}
+    </style>
+    {defs_clips_str}
+    <filter id="bubble-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#f8fafc" />
+  {"".join(svg_panels)}
+</svg>"""
+    return svg, canvas_w, canvas_h
+
+
+def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_path=None, layout="2x3"):
     """
     Main programmatic entrypoint for daily workflows.
+    Supports layout='2x3' (Twitter standard 1200x1800) and layout='1x3' (narrow strip).
     """
     if isinstance(spec_path_or_dict, (str, Path)):
         spec_file = Path(spec_path_or_dict)
@@ -392,8 +516,12 @@ def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_
     else:
         episode_spec = spec_path_or_dict
 
-    b64_list = crop_panels_to_b64(raw_image_path)
-    svg_content, cw, ch = build_vertical_manga_svg(b64_list, episode_spec)
+    if layout == "2x3":
+        b64_list = crop_panels_from_2x3(raw_image_path)
+        svg_content, cw, ch = build_2x3_fullwidth_manga_svg(b64_list, episode_spec)
+    else:
+        b64_list = crop_panels_to_b64(raw_image_path)
+        svg_content, cw, ch = build_vertical_manga_svg(b64_list, episode_spec)
 
     output_png = Path(output_png_path)
     if not output_svg_path:
@@ -411,14 +539,16 @@ def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_
 
 def main():
     parser = argparse.ArgumentParser(description="Build vertical 4-panel manga with auto-fitted vector speech bubbles.")
-    parser.add_argument("--image", required=True, help="Path to raw 4-panel image (2x2 wordless AI render)")
+    parser.add_argument("--image", required=True, help="Path to raw 4-panel image")
     parser.add_argument("--spec", required=True, help="Path to episode spec JSON or YAML file")
     parser.add_argument("--output", required=True, help="Output PNG path")
     parser.add_argument("--svg-output", help="Optional output SVG path")
+    parser.add_argument("--layout", choices=["2x3", "1x3"], default="2x3", help="Manga layout format: '2x3' (Twitter 1200x1800 full-width) or '1x3' (720x2160 strip)")
 
     args = parser.parse_args()
-    run_pipeline(args.image, args.spec, args.output, args.svg_output)
+    run_pipeline(args.image, args.spec, args.output, args.svg_output, layout=args.layout)
 
 
 if __name__ == "__main__":
     main()
+
