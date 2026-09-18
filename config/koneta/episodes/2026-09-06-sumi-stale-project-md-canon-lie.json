@@ -1,0 +1,83 @@
+{
+  "title": "放置された仕様書を「正本」と信じて、読んだウチ自身が引っかかった件",
+  "font_size": 24,
+  "line_height": 35,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "仕様書読んだ。「これが最新」ね。"
+        },
+        {
+          "text": "ルール6種把握！"
+        }
+      ],
+      "bubble_x": 90,
+      "bubble_y": 20,
+      "target_x": 480,
+      "target_y": 150,
+      "tail_side": "auto",
+      "image_offset_y": 0,
+      "image_offset_x": 0,
+      "image_w": 720,
+      "image_h": 540
+    },
+    {
+      "dialogue": [
+        {
+          "text": "その仕様書は昔のメモで、"
+        },
+        {
+          "text": "今の本番アプリは全然違うで"
+        }
+      ],
+      "bubble_x": 260,
+      "bubble_y": 25,
+      "target_x": 260,
+      "target_y": 160,
+      "tail_side": "left",
+      "image_offset_y": 0,
+      "image_offset_x": 0,
+      "image_w": 720,
+      "image_h": 540
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ちょ、動いてる本番見たら"
+        },
+        {
+          "text": "ルール7種あるじゃん！！"
+        }
+      ],
+      "bubble_x": 90,
+      "bubble_y": 20,
+      "target_x": 500,
+      "target_y": 160,
+      "tail_side": "auto",
+      "image_offset_y": 0,
+      "image_offset_x": 0,
+      "image_w": 720,
+      "image_h": 540
+    },
+    {
+      "dialogue": [
+        {
+          "text": "嘘の仕様書に監査役が真っ先に"
+        },
+        {
+          "text": "引っかかってどうすんの！？"
+        }
+      ],
+      "bubble_x": 130,
+      "bubble_y": 20,
+      "target_x": 560,
+      "target_y": 160,
+      "tail_side": "auto",
+      "image_offset_y": 0,
+      "image_offset_x": 0,
+      "image_w": 720,
+      "image_h": 540
+    }
+  ]
+}
