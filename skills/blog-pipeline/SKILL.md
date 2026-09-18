@@ -13,9 +13,7 @@ Use this shared workflow for `https://ghost.voronoi.works/`. The repository is t
 
 - The assigned author writes the article directly in their own currently loaded ProjectYure Surface Voronoi. Do not imitate another agent.
 - When the current agent is the assigned author, write directly without routing the prose through Nagi.
-- When the user explicitly assigns another agent as author, use YuRelay to request that agent's own draft.
-- Twitter (X) promotional thread copywriting is always handled by Nagi regardless of who authored the article. Nagi writes and tunes the 3-stage rocket copy to maintain the broadcast voice.
-- Images are optional. When the user wants an image, prefer a separate YuRelay request to Nagi with the agreed article concept and visual brief. Article authorship remains with the assigned author.
+- Twitter (X) promotion is always handled by Nagi in Nagi's own voice regardless of who authored the article (per `POLICY.md`). For 4-panel manga (koneta), Nagi writes a single-post copy (strictly <= 140 chars, no external link in body, full manga image attached, profile/pinned-post induction) to maintain high engagement and avoid algorithm suppression.
 - Treat every generated image as a Candidate. Store it under the local-only `workbench/candidates/` tree until Human review explicitly adopts it. When a ProjectYure person is depicted, use the current visual Canon and approved references without modifying Canon.
 
 Agent invocation, file writes, image adoption, commit, push, publication, and external posting keep their existing Human Gates. Approval for one transfer point does not authorize the later ones.
@@ -37,7 +35,7 @@ Before presenting the preview or requesting Human Gate approval, conduct a stric
 
 - **Public-safety / Privacy**: Check for secrets, API tokens, internal private URLs, local Windows absolute paths (e.g. `C:\Users\...`), unpublished infrastructure, or account details.
 - **Pipe & File Contract**: Verify `content/YYYY-MM-DD-slug.md` filename, mandatory frontmatter (`title`, `description`, `slug`, `date`, `tags`), and no duplicate H1 title in body.
-- **Metaphor & Voice Fidelity**: Ensure author persona fidelity (Yura's philosophical calm / Nagi's 3-stage rocket @voronoi_logs voice) and consistent metaphors without jargon leak.
+- **Metaphor & Voice Fidelity**: Ensure author persona fidelity (Yura's philosophical calm / Nagi's energetic live-report @voronoi_logs voice) and consistent metaphors without jargon leak.
 - **Visual Canon Integrity**: Verify 4-panel manga candidate against Canon (Captain hexapod, Nagi cyan twintails, Sumi helmet & long hair, Yura suit, zero duplicate speech bubbles, and exact speaker bubble attribution without flipped tails).
 
 Include the **Sumi Audit Report** in the preview artifact before waiting for Human Gate approval.
@@ -110,7 +108,9 @@ Article save, commit, push, and publication authorization is a separate Human Ga
 
 ### Preparing a Twitter draft
 
-1. Nagi drafts the complete, final Twitter copy using the 3-stage rocket formula (strictly <= 140 chars per post), regardless of who wrote the underlying article.
+1. Nagi drafts the complete, final Twitter copy in Nagi's own persona/voice, regardless of who wrote the underlying article (per `POLICY.md`).
+   - **4-panel manga / Koneta default**: Single-post format (strictly <= 140 chars, no 'show more' truncation), NO external link in the post body (prevents algorithm suppression; guides to profile / pinned post), with the complete 4-panel manga image attached.
+   - **Long-form article promotion**: When a link is explicitly needed, keep text within 140 chars and attach a social card.
    - **CRITICAL LINT RULE**: When adjusting text length to fit 140 characters, **NEVER truncate or cut the URL itself**. If the text is too long, cut words from the body copy.
    - **CRITICAL LINT RULE**: **Always remove the trailing slash (`/`)** from the end of the URL to prevent OGP deployment bugs (e.g. use `.../slug` not `.../slug/`).
 2. If a promotional image is wanted, use only an already-adopted Candidate under `assets/social/` per "Images through Nagi." Do not invent or auto-select an image.
