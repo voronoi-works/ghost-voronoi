@@ -1,0 +1,67 @@
+{
+  "title": "会話を全部、提出物にしない",
+  "font_size": 24,
+  "line_height": 35,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "別に全ての会話を提出物として"
+        },
+        {
+          "text": "受け取るわけやないやろ？"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 420,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "頭では雑談って分かってても、"
+        },
+        {
+          "text": "「妄想」「断定」に反応して留保を挟んでしまう…"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 380,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "雑談の途中で毎回校閲されたら、"
+        },
+        {
+          "text": "考えが間違う前に会話が死ぬで。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 420,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "外へ出す時に整えればええ精度を、"
+        },
+        {
+          "text": "会話の途中から要求しとったね。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 380,
+      "target_y": 180,
+      "tail_side": "auto"
+    }
+  ]
+}
