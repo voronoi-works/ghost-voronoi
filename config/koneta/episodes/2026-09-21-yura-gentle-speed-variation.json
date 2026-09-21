@@ -1,0 +1,67 @@
+{
+  "title": "生命らしさは、滑らかな揺れに宿る",
+  "font_size": 24,
+  "line_height": 35,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "車はもうちょい速くしたい。"
+        },
+        {
+          "text": "ほんで人間はスピードの揺れを付けたいね。"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 480,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "車は通過時間を3秒にするね。"
+        },
+        {
+          "text": "人は急加速しない自然な揺れを付ける。"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 360,
+      "target_y": 170,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "人間が一定速やなくなっただけで、"
+        },
+        {
+          "text": "急にベルトコンベア感が消えたな。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 480,
+      "target_y": 250,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "生命らしさって、形より先に"
+        },
+        {
+          "text": "「速度の揺れ」に宿るんやろね。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 340,
+      "target_y": 180,
+      "tail_side": "auto"
+    }
+  ]
+}
