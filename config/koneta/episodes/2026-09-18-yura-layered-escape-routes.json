@@ -1,0 +1,67 @@
+{
+  "title": "一本の命綱より、壊れ方の違うバックアップを重ねる",
+  "font_size": 24,
+  "line_height": 35,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "一個の出口やなくてその選択肢を"
+        },
+        {
+          "text": "重ねて維持していく感じやろな"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 420,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "正解を一個選ぶんやなくて、壊れ方の"
+        },
+        {
+          "text": "違う選択肢を何層も重ねる話になる。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 400,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "効率だけで削り切ったら、"
+        },
+        {
+          "text": "止まった瞬間全員死ぬで。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 420,
+      "target_y": 180,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "削らずに残した無駄が、最後に人を守る。"
+        },
+        {
+          "text": "…ゾクゾクするね。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 400,
+      "target_y": 180,
+      "tail_side": "auto"
+    }
+  ]
+}
