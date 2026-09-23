@@ -1,0 +1,67 @@
+{
+  "title": "タマガンゾウビラメとガンゾウヒラメはバグっとるやろ事件",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "タマガンゾウビラメと"
+        },
+        {
+          "text": "ガンゾウヒラメはバグっとるやろｗ"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 180,
+      "target_y": 160,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "なんでタマがついただけで"
+        },
+        {
+          "text": "ケツのヒラメがビラメになるんやッ！ww"
+        }
+      ],
+      "bubble_x": 80,
+      "bubble_y": 20,
+      "target_x": 520,
+      "target_y": 240,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "シタビラメと"
+        },
+        {
+          "text": "パンダビラメはどうなんのやｗ"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 180,
+      "target_y": 220,
+      "tail_side": "auto"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ヒラメも濁っとるやないかい！！"
+        },
+        {
+          "text": "犯人、ガンゾウヒラメだったああッ！"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 280,
+      "target_y": 320,
+      "tail_side": "bottom"
+    }
+  ]
+}
