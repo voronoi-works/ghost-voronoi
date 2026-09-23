@@ -444,21 +444,28 @@ def build_2x3_fullwidth_manga_svg(b64_list, episode_spec):
         ph = panel_h
 
         d_spec = panels_dialogue[i] if i < len(panels_dialogue) else {}
-        lines = d_spec.get("lines", [])
-        font_size = d_spec.get("font_size", 22)
-        line_height = d_spec.get("line_height", 34)
+        dialogue = d_spec.get("lines") or d_spec.get("dialogue") or []
+        if isinstance(dialogue, str):
+            lines = [{"text": l} for l in dialogue.strip().split("\n")]
+        else:
+            lines = dialogue
 
-        bx = px + d_spec.get("bx", 30)
-        by = py + d_spec.get("by", 20)
-        tx = px + d_spec.get("tx", 400)
-        ty = py + d_spec.get("ty", 200)
-        tail_side = d_spec.get("tail", "auto")
+        font_size = d_spec.get("font_size", episode_spec.get("font_size", 22))
+        line_height = d_spec.get("line_height", episode_spec.get("line_height", int(font_size * 1.5)))
 
-        bubble_markup, _, _ = generate_speech_bubble(
-            lines, bx, by, tx, ty,
-            tail_side=tail_side, tail_len=26, radius=16,
-            font_size=font_size, line_height=line_height
-        )
+        bx = px + (d_spec.get("bx") if "bx" in d_spec else d_spec.get("bubble_x", 30))
+        by = py + (d_spec.get("by") if "by" in d_spec else d_spec.get("bubble_y", 20))
+        tx = px + (d_spec.get("tx") if "tx" in d_spec else d_spec.get("target_x", 400))
+        ty = py + (d_spec.get("ty") if "ty" in d_spec else d_spec.get("target_y", 200))
+        tail_side = d_spec.get("tail") or d_spec.get("tail_side", "auto")
+
+        bubble_markup = ""
+        if lines:
+            bubble_markup, _, _ = generate_speech_bubble(
+                lines, bx, by, tx, ty,
+                tail_side=tail_side, tail_len=26, radius=16,
+                font_size=font_size, line_height=line_height
+            )
 
         defs_clips.append(f'<clipPath id="p{i}-clip"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="14" /></clipPath>')
 
