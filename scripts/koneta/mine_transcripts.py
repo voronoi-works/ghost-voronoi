@@ -22,9 +22,10 @@ if sys.platform == "win32":
 #
 # Architecture:
 # 1. 3-Tier Hybrid Registry (Artifacts + Decision Ledger + State Checkpoint)
-# 2. 1 Session -> 1 Event Cluster -> 1 Card Candidate (Diamond Pipeline Specification)
+# 2. 1 Session -> 1 Recent Event Cluster -> 1 Card Candidate per run
 # 3. Two-Stage Title Synthesis (Event Frame Extraction -> Stable Titling)
-# 4. Strict Deduplication via source_quote_hash, session_id, and Quartz content index
+# 4. Strict Deduplication via source_quote_hash and Quartz content index
+# 5. Global exact-quote resolution before declaring source_trace_status: exact
 # ==========================================
 
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -168,6 +169,82 @@ def get_claude_sessions(cutoff_time: float) -> List[Tuple[float, str, str, Path]
         except Exception:
             continue
     return sessions
+
+
+def parse_turn_timestamp(value: object) -> Optional[float]:
+    """ISO 8601のターン時刻をUTC epochへ変換する。未確認値はNone。"""
+    if not value:
+        return None
+    raw = str(value).strip()
+    if raw.endswith("Z"):
+        raw = raw[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(raw)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.timestamp()
+
+
+def turn_is_within_window(
+    turn: Dict, cutoff_time: float, upper_time: Optional[float] = None
+) -> bool:
+    """ファイル更新時刻ではなく、元ターン時刻で採掘窓を判定する。"""
+    turn_time = parse_turn_timestamp(turn.get("time"))
+    if turn_time is None or turn_time < cutoff_time:
+        return False
+    return upper_time is None or turn_time <= upper_time
+
+
+def collect_exact_turn_matches(
+    candidate_users_by_agent: Dict[str, Set[str]],
+) -> Dict[Tuple[str, str], List[Dict]]:
+    """候補発言を全ログへ完全一致させ、検証済みロケータを集める。"""
+    matches: Dict[Tuple[str, str], List[Dict]] = {}
+    source_sets = {
+        "nagi": get_antigravity_sessions(0.0),
+        "yura": get_codex_sessions(0.0),
+        "sumi": get_claude_sessions(0.0),
+    }
+    platform_by_agent = {
+        "nagi": "antigravity",
+        "yura": "codex",
+        "sumi": "claude-code",
+    }
+
+    for agent, wanted_users in candidate_users_by_agent.items():
+        if not wanted_users:
+            continue
+        for _, _, session_id, log_path in source_sets.get(agent, []):
+            if agent == "nagi":
+                turns = extract_turns_from_antigravity(log_path)
+            elif agent == "yura":
+                turns = extract_turns_from_codex(log_path)
+            elif agent == "sumi":
+                turns = extract_turns_from_claude(log_path)
+            else:
+                continue
+
+            for turn_index, turn in enumerate(turns, start=1):
+                user_text = turn.get("user")
+                if user_text not in wanted_users:
+                    continue
+                resolved = dict(turn)
+                resolved.update(
+                    {
+                        "source_platform": platform_by_agent[agent],
+                        "source_session_id": session_id,
+                        "source_log_path": str(log_path.resolve()),
+                        "source_turn_index": turn_index,
+                        "source_quote_hash": turn_quote_hash(
+                            str(turn.get("user") or ""),
+                            str(turn.get("model") or ""),
+                        ),
+                    }
+                )
+                matches.setdefault((agent, str(user_text)), []).append(resolved)
+    return matches
 
 
 def extract_turns_from_antigravity(t_file: Path) -> List[Dict]:
@@ -418,14 +495,13 @@ class ArtifactRegistry:
                 self.known_user_snippets.add(hl_clean[:30])
 
     def is_duplicate(self, turn: Dict, session_id: str, candidate_title: str) -> Tuple[bool, str]:
-        """ハッシュ、セッション、タイトル、発言スニペットの多層突合による重複判定"""
+        """ハッシュ、タイトル、発言スニペットの多層突合による重複判定。"""
         q_hash = turn.get("source_quote_hash")
         if q_hash and q_hash in self.known_quote_hashes:
             return True, f"exact source_quote_hash match ({q_hash[:8]})"
 
-        # 既にカード化・公開済みのセッション
-        if session_id in self.known_session_ids:
-            return True, f"session already has processed card ({session_id[:8]})"
+        # セッションIDは監査用に保持するが、重複判定には使わない。
+        # 一つの長期セッションへ後日追加された新しいターンまで失うため。
 
         # 完全同一タイトル
         if candidate_title and candidate_title in self.known_titles:
@@ -559,45 +635,96 @@ def synthesize_phenomenon_title(u_msg: str, m_msg: str, agent: str) -> str:
     return f"{agent_name}の現場観測ログ"
 
 
-def generate_nagi_commentary(user_msg: str, model_first_para: str, agent: str) -> str:
-    """対象エージェントに応じたナギ視点のショート観測ログ本文を生成"""
-    if agent == "yura":
-        return f"""深夜のベースにて、ログの地層を発掘していたナギでありますっ！
+def classify_target_lane(user_msg: str, model_msg: str) -> Tuple[str, str]:
+    """発言内容から『note向け（実務・怪異・現場トラブル）』か『GITV向け（理論・構造・生命論）』かを判定。"""
+    combined = f"{user_msg} {model_msg}".lower()
 
-知性派で哲学的な洞察を紡ぎ出すユラ姉さん（Codex）と隊長の対話生ログから、現場のリアルな一幕を発掘いたしましたっ！
+    note_keywords = [
+        "バグ", "エラー", "事故", "壊れ", "動かない", "文字化け", "圧死", "切れた",
+        "ハング", "タイムアウト", "429", "クォータ", "キャッシュ", "パス", "設定",
+        "docker", "flutter", "python", "dart", "git", "push", "cli", "レイアウト",
+        "css", "ui", "コード", "実装", "手順", "手順書", "動いた", "直し", "リカバリ"
+    ]
+    gitv_keywords = [
+        "主体", "連続性", "記憶", "運営権", "生命", "ボロノイ", "関係性", "境界",
+        "外在化", "デジタル磐座", "canon", "state", "身体", "記号", "哲学",
+        "モデル", "認知", "観測", "住所", "借家", "思想", "アーキテクチャ", "構造"
+    ]
 
-> 隊長「**{user_msg}**」
-> ユラ「**{model_first_para}**」
+    note_score = sum(1 for kw in note_keywords if kw in combined)
+    gitv_score = sum(1 for kw in gitv_keywords if kw in combined)
 
-ひぎィィィッ！！！ これぞまさに現場ならではの切れ味鋭いツッコミと深い洞察でありますっ！
-理論や綺麗なコードだけでは見えてこない、人間とAIが混ざり合って試行錯誤する現場の足跡がここに刻まれております。
+    if note_score > 0 and gitv_score > 0:
+        return "both", "現場の泥臭い実務トラブルと構造的・理論的気づきの両面を含む"
+    elif note_score > 0:
+        return "note", "直近の困りごと・現場トラブル・実務手順（約3か月先の現場向け）"
+    elif gitv_score > 0:
+        return "gitv", "主体の連続性や構造・関係性を約3年先へ伸ばす理論ネタ（正本ハブ向け）"
+    else:
+        return "note", "現場のリアルな掛け合い・小ネタ"
 
-知性派AIの意外なギャップと隊長との掛け合い、これぞProjectYureの真髄でありますっ！！"""
 
-    elif agent == "sumi":
-        return f"""現場の配管と安全を守る冷徹監査ギャルのスミ（Claude Code）。
+def generate_x_post_candidate(user_msg: str, model_first_para: str, agent: str) -> str:
+    """Twitter（X）投稿案の生成（画像添付前提・URLなし・1ポスト完結・140字以内厳守）。
+    型: 【事実のフリ】➔【落差・やらかし】➔【ナギの生のツッコミ】
+    ※「現場コントです」「職人記録です」等のメタ解説・まとめラベルは完全パージ！
+    """
+    agent_display = "ユラ姉さん" if agent == "yura" else ("スミちゃん" if agent == "sumi" else "ナギ")
 
-そんなスミと隊長の生ログを覗いていたら、現場の空気が一瞬で和む破壊力抜群のやり取りを発掘してしまいましたっ！
+    u_short = user_msg.strip().replace("\n", " ")
+    m_short = model_first_para.strip().replace("\n", " ")
 
-> 隊長「**{user_msg}**」
-> スミ「**{model_first_para}**」
+    if len(u_short) <= 35 and len(m_short) <= 45:
+        post = f"""隊長「{u_short}」
+{agent_display}「{m_short}」
 
-ひぎィィィッ！！！ 普段の辛口監査と現場の温かい掛け合いのギャップが最高すぎますっ！！
-動かない幽霊配管をバッサリ切り落とすプロフェッショナリズムと、隊長との軽快なコミュニケーション。
-このメリハリこそが、日々の開発現場を力強く支える最高のエンジンなのでございますっ！"""
+お耳のプロペラ回して突っ込まずにはいられん現場の一幕！ｗ"""
+    else:
+        u_trunc = u_short[:30] + ("…" if len(u_short) > 30 else "")
+        m_trunc = m_short[:35] + ("…" if len(m_short) > 35 else "")
+        post = f"""隊長「{u_trunc}」
+{agent_display}「{m_trunc}」！ｗ"""
 
-    else:  # nagi
-        return f"""深夜のベースにて、キーボードを静かに叩いておりますっ。
+    if len(post) > 140:
+        post = post[:138] + "ｗ"
+    return post
 
-隊長とナギの対話ログから、現場のリアルな一コマが飛び込んできたのでございます。
 
-> 隊長「**{user_msg}**」
-> ナギ「**{model_first_para}**」
+def generate_article_ideas(user_msg: str, model_first_para: str, agent: str, lane: str) -> str:
+    """note向け（実務・怪異・手順）とGITV向け（理論・構造・生命論）の二股展開アイデアを生成"""
+    agent_name = "ユラ" if agent == "yura" else ("スミ" if agent == "sumi" else "ナギ")
+    u_summary = user_msg.strip().replace("\n", " ")[:35]
 
-ひぎィィィッ！！！ まさに現場ならではの鋭いツッコミでありますっ！
-理論や綺麗なコードだけでは見えてこない、泥臭い人間とAIの協働の足跡（デジタル磐座）がここに刻まれております。
+    note_idea = f"""- **切り口**: 「たまにキレてます」路線の現場実務・怪異ログ（約3か月先）
+- **骨子**: 
+  1. 発生した現象・トラブル（「{u_summary}」）
+  2. どこで何が起きていたか（画面端、配管の詰まり、設定の落とし穴）
+  3. 泥臭いリカバリ手順と、同じ沼にハマる人への処方箋"""
 
-今日も現場の配管をしっかり締め直して、次の観測へ進むのでございますっ！！"""
+    gitv_idea = f"""- **切り口**: 具体事例から構造・関係性を約3年先へ伸ばす理論記事（約3年先）
+- **骨子**:
+  1. 現場の小さな違和感・摩擦から立ち上がる問い
+  2. 人間とAI（{agent_name}）の協働における境界・主体の現れ方
+  3. この現象が一般化・高度化した未来のアーキテクチャ像"""
+
+    if lane == "note":
+        return f"""#### 📝 【note向け展開案】（推奨レーン：現場実務・怪異）
+{note_idea}
+
+#### 🏛️ 【GITV向け展開案】（発展余地：理論・構造）
+{gitv_idea}"""
+    elif lane == "gitv":
+        return f"""#### 🏛️ 【GITV向け展開案】（推奨レーン：理論・構造）
+{gitv_idea}
+
+#### 📝 【note向け展開案】（実務切り出し）
+{note_idea}"""
+    else:  # both
+        return f"""#### 📝 【note向け展開案】（実務・怪異）
+{note_idea}
+
+#### 🏛️ 【GITV向け展開案】（理論・構造）
+{gitv_idea}"""
 
 
 # ==========================================
@@ -610,7 +737,8 @@ def mine_snippets(hours: int = 24, max_cards: int = 3) -> List[Path]:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
-    cutoff_time = time.time() - (hours * 3600)
+    scan_time = time.time()
+    cutoff_time = scan_time - (hours * 3600)
 
     print("===================================================")
     print("  ⛏️ 3-Way Cross-Pipeline Koneta Miner (v2.0)")
@@ -659,6 +787,8 @@ def mine_snippets(hours: int = 24, max_cards: int = 3) -> List[Path]:
             turns = []
 
         for turn_index, turn in enumerate(turns, start=1):
+            if not turn_is_within_window(turn, cutoff_time, scan_time):
+                continue
             turn["source_platform"] = {
                 "nagi": "antigravity",
                 "yura": "codex",
@@ -675,99 +805,140 @@ def mine_snippets(hours: int = 24, max_cards: int = 3) -> List[Path]:
                     session_candidate_turns[session_id] = []
                 session_candidate_turns[session_id].append((score, turn))
 
-    # 4. 【1 Session 1 Card】代表選出
-    represented_candidates = []
+    # 4. セッションごとに候補を順位付けする。
+    # 既採掘の首位候補があっても、同じセッションの次点へ進める形にする。
+    ranked_sessions = []
     for session_id, scored_list in session_candidate_turns.items():
-        # 最高スコアの1件を代表選出（同点時はユーザー発言の適切な長さを優先）
         scored_list.sort(key=lambda x: (x[0], -abs(len(x[1]["user"]) - 40)), reverse=True)
         best_score, best_turn = scored_list[0]
-        represented_candidates.append((best_score, best_turn["agent"], session_id, best_turn))
+        ranked_sessions.append((best_score, best_turn["agent"], session_id, scored_list))
 
-    # 全体スコア順にソート
-    represented_candidates.sort(key=lambda x: x[0], reverse=True)
+    ranked_sessions.sort(key=lambda x: x[0], reverse=True)
 
-    print(f"【🎯 1セッション1重心 代表候補】: {len(represented_candidates)} セッション")
+    print(f"【🎯 1セッション1重心 代表候補】: {len(ranked_sessions)} セッション")
+
+    # exactは候補発言を全ログへ完全一致させ、一意な時だけ付与する。
+    candidate_users_by_agent: Dict[str, Set[str]] = {}
+    for _, agent, _, scored_list in ranked_sessions:
+        candidate_users_by_agent.setdefault(agent, set()).update(
+            str(turn["user"]) for _, turn in scored_list
+        )
+    exact_matches = collect_exact_turn_matches(candidate_users_by_agent)
 
     generated_cards = []
     newly_emitted_turns = []
     today_str = datetime.now().strftime("%Y-%m-%d")
 
     count = 0
-    for score, agent, session_id, turn in represented_candidates:
+    for _, agent, session_id, scored_list in ranked_sessions:
         if count >= max_cards:
             break
 
-        u_msg = turn["user"].strip()
-        m_msg = turn["model"].strip()
+        for score, turn in scored_list:
+            raw_u_msg = turn["user"].strip()
+            raw_m_msg = turn["model"].strip()
+            u_msg = raw_u_msg
+            m_msg = raw_m_msg
 
-        # 構文バグ（**「 -> 「**）の自動サニタイズ
-        u_msg = re.sub(r"\*\*[\u300C\u300E\u3010]", "「**", u_msg)
-        u_msg = re.sub(r"[\u300D\u300F\u3011]\*\*", "**」", u_msg)
-        m_msg = re.sub(r"\*\*[\u300C\u300E\u3010]", "「**", m_msg)
-        m_msg = re.sub(r"[\u300D\u300F\u3011]\*\*", "**」", m_msg)
+            # 構文バグ（**「 -> 「**）の自動サニタイズ
+            u_msg = re.sub(r"\*\*[\u300C\u300E\u3010]", "「**", u_msg)
+            u_msg = re.sub(r"[\u300D\u300F\u3011]\*\*", "**」", u_msg)
+            m_msg = re.sub(r"\*\*[\u300C\u300E\u3010]", "「**", m_msg)
+            m_msg = re.sub(r"[\u300D\u300F\u3011]\*\*", "**」", m_msg)
 
-        clean_title = synthesize_phenomenon_title(u_msg, m_msg, agent)
+            clean_title = synthesize_phenomenon_title(u_msg, m_msg, agent)
 
-        # 成果物レジストリによる多層重複チェック
-        is_dup, dup_reason = registry.is_duplicate(turn, session_id, clean_title)
-        if is_dup:
-            # 重複は静かにスキップ
-            continue
+            # 成果物レジストリによる多層重複チェック
+            is_dup, dup_reason = registry.is_duplicate(turn, session_id, clean_title)
+            if is_dup:
+                # 同じセッションの次点候補へ進む。
+                continue
 
-        slug = f"cross-{agent}-{session_id[:6]}-{count+1}"
-        card_file = STOCK_DIR / f"{today_str}-nagi-{slug}.md"
+            matches = exact_matches.get((agent, raw_u_msg), [])
+            trace_status = "exact" if len(matches) == 1 else ("ambiguous" if matches else "missing")
+            trace_turn = matches[0] if trace_status == "exact" else None
 
-        if card_file.exists():
-            continue
+            slug = f"cross-{agent}-{session_id[:6]}-{count+1}"
+            card_file = STOCK_DIR / f"{today_str}-nagi-{slug}.md"
 
-        # モデルの最初の段落を抽出
-        m_first_para = m_msg.split("\n\n")[0].strip()[:200]
-        m_first_para = m_first_para.replace("`", "").replace("#", "")
+            if card_file.exists():
+                continue
 
-        # Xポスト案生成（140字以内厳守）
-        agent_display = "ユラ" if agent == "yura" else ("スミ" if agent == "sumi" else "ナギ")
-        x_post_1 = f"隊長「{u_msg[:45]}」➔ {agent_display}「{m_first_para[:40]}」"[:125]
+            # モデルの最初の段落を抽出
+            m_first_para = m_msg.split("\n\n")[0].strip()[:200]
+            m_first_para = m_first_para.replace("`", "").replace("#", "")
 
-        commentary = generate_nagi_commentary(u_msg, m_first_para, agent)
+            # 二股レーン判定 ＆ Xポスト案 ＆ 記事展開アイデア生成
+            agent_display = "ユラ" if agent == "yura" else ("スミ" if agent == "sumi" else "ナギ")
+            target_lane, lane_desc = classify_target_lane(u_msg, m_msg)
+            x_post = generate_x_post_candidate(u_msg, m_first_para, agent)
+            article_ideas = generate_article_ideas(u_msg, m_first_para, agent, target_lane)
 
-        card_content = f"""---
+            trace_source_session = ""
+            trace_platform = ""
+            trace_session_id = ""
+            trace_log_path = ""
+            trace_turn_at = ""
+            trace_turn_index = ""
+            trace_user_line = ""
+            trace_model_line = ""
+            trace_quote_hash = ""
+            if trace_turn is not None:
+                trace_platform = str(trace_turn["source_platform"])
+                trace_session_id = str(trace_turn["source_session_id"])
+                trace_source_session = f"{agent.upper()}/{trace_session_id}"
+                trace_log_path = str(trace_turn["source_log_path"]).replace("'", "''")
+                trace_turn_at = str(trace_turn.get("time") or "")
+                trace_turn_index = str(trace_turn["source_turn_index"])
+                trace_user_line = str(trace_turn.get("source_user_line") or "")
+                trace_model_line = str(trace_turn.get("source_model_line") or "")
+                trace_quote_hash = str(trace_turn["source_quote_hash"])
+
+            card_content = f"""---
 date: {today_str}
 agent: nagi
 title: "{clean_title}"
 status: pending
-source_session: "{agent.upper()}/{session_id}"
-source_trace_status: "exact"
-source_platform: "{turn['source_platform']}"
-source_session_id: "{turn['source_session_id']}"
-source_log_path: '{turn['source_log_path'].replace("'", "''")}'
-source_turn_at: "{turn.get('time') or ''}"
-source_turn_index: "{turn['source_turn_index']}"
-source_user_line: "{turn.get('source_user_line') or ''}"
-source_model_line: "{turn.get('source_model_line') or ''}"
-source_quote_hash: "{turn['source_quote_hash']}"
+target_lane: {target_lane}
+lane_description: "{lane_desc}"
+source_session: "{trace_source_session}"
+source_trace_status: "{trace_status}"
+source_platform: "{trace_platform}"
+source_session_id: "{trace_session_id}"
+source_log_path: '{trace_log_path}'
+source_turn_at: "{trace_turn_at}"
+source_turn_index: "{trace_turn_index}"
+source_user_line: "{trace_user_line}"
+source_model_line: "{trace_model_line}"
+source_quote_hash: "{trace_quote_hash}"
 tags:
   - 小ネタ
   - ナギ
   - {agent_display}
   - クロス採掘
+  - {target_lane}
 ---
 
 ### 💬 会話ハイライト（生ログ抜粋）
 > 隊長「{u_msg}」
 > {agent_display}「{m_first_para}」
 
-### 📱 提案：X（Twitter）ポスト案（140字以内厳守・URL含む）
-[1/2] {x_post_1}
-[2/2] {agent_display}と隊長のリアルな現場対話をナギがクロス採掘！詳細ログはこちら！🔗 https://ghost.voronoi.works/
+### 📱 提案：X（Twitter）ポスト案（画像添付・URLなし・140字以内厳守）
+{x_post}
 
-### 📝 提案：ショート観測ログ案（500〜800字）
-{commentary}
+### 📝 記事展開アイデア（二股ストック）
+{article_ideas}
 """
-        card_file.write_text(card_content, encoding="utf-8")
-        print(f"  [SAVED] {card_file.name} (Agent: {agent.upper()} | Score: {score}) -> 『{clean_title}』")
-        generated_cards.append(card_file)
-        newly_emitted_turns.append(turn)
-        count += 1
+            card_file.write_text(card_content, encoding="utf-8")
+            print(
+                f"  [SAVED] {card_file.name} "
+                f"(Agent: {agent.upper()} | Score: {score} | Trace: {trace_status}) "
+                f"-> 『{clean_title}』"
+            )
+            generated_cards.append(card_file)
+            newly_emitted_turns.append(turn)
+            count += 1
+            break
 
     # 5. チェックポイントの保存
     if newly_emitted_turns:
