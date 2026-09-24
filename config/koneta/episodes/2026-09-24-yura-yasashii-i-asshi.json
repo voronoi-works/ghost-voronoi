@@ -1,0 +1,64 @@
+{
+  "title": "「人間性、ない方が優しい。」の「い」が右端で圧死しとる事件",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "表紙イラスト、題字入れときましたよ。"
+        },
+        {
+          "text": "「人間性、ない方が優しい。」です。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 520,
+      "target_y": 180,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "優しいの、「い」が半分しかないｗ"
+        }
+      ],
+      "bubble_x": 220,
+      "bubble_y": 20,
+      "target_x": 220,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ほんまや、右端で"
+        },
+        {
+          "text": "「い」が圧死しとるｗ"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 500,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "題字少し縮めて左へ寄せて、"
+        },
+        {
+          "text": "全文安全域に収めるで。"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 540,
+      "target_y": 320,
+      "tail_side": "right"
+    }
+  ]
+}
