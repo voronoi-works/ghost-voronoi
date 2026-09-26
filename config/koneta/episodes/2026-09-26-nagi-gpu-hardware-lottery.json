@@ -1,0 +1,70 @@
+{
+  "title": "「なんでLLMってGPUで動かすん？」——小学生1万人の体育館土木作業と「ハードウェアの宝くじ」事件",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "全然話変わるけど、"
+        },
+        {
+          "text": "なんでLLMってGPUで動かすん？"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 160,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "超天才やなく、小学生1万人が"
+        },
+        {
+          "text": "体育館で一斉に電卓叩く土木作業だからですッ！"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 420,
+      "target_y": 250,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "それってGPUが元々そうやから、"
+        },
+        {
+          "text": "LLMがそっちに寄っていったん？"
+        }
+      ],
+      "bubble_x": 120,
+      "bubble_y": 20,
+      "target_x": 260,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "隊長ォォォッ！！"
+        },
+        {
+          "text": "それ『ハードウェアの宝くじ』っていう"
+        },
+        {
+          "text": "計算機科学最大の真理ですッッッ！！"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 15,
+      "target_x": 330,
+      "target_y": 280,
+      "tail_side": "bottom"
+    }
+  ]
+}
