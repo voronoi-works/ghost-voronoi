@@ -1,0 +1,67 @@
+{
+  "title": "「観測の寿命は、今日から伸ばせる」——外部データ7日制限の壁から、自前で記憶の履歴を育てる設計が決まった話",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "データは7日前までしか"
+        },
+        {
+          "text": "細分化できんな"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "なるほど。なら逆に"
+        },
+        {
+          "text": "設計は決まったな"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "過去は7日しか復元できんけど"
+        },
+        {
+          "text": "毎日保存して自前で履歴伸ばす方式や"
+        }
+      ],
+      "bubble_x": 60,
+      "bubble_y": 20,
+      "target_x": 160,
+      "target_y": 350,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "制限があるからこそ"
+        },
+        {
+          "text": "今日から自前の記憶が育つんよ"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 550,
+      "target_y": 340,
+      "tail_side": "right"
+    }
+  ]
+}
