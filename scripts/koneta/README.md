@@ -4,7 +4,10 @@ These tracked scripts operate on the local-only cards in
 `workbench/koneta-stock/` without adopting or publishing them.
 
 - `mine_transcripts.py` mines recent Codex, Claude Code, and Antigravity JSONL
-  turns and writes draft cards with source locators.
+  turns and writes draft cards with source locators. The lookback is enforced
+  on each turn timestamp, not only on the containing log file's mtime. A
+  previously mined session may yield a later, new turn; deduplication is based
+  on the full-turn quote hash rather than treating the whole session as spent.
 - `backfill_source_trace.py` finds a unique raw turn for an existing card. It
   defaults to a dry run; `--write` is required to update cards.
 - `audit_source_trace.py` verifies that every `exact` card still points to an
@@ -22,7 +25,8 @@ SHA-256 quote hash calculated from the unabridged user and model messages.
 
 Use `ambiguous` when more than one raw turn matches and `missing` when none do.
 Unverified locator fields remain empty; they are never inferred from card copy
-or relay prompts.
+or relay prompts. The miner resolves candidate user messages against all raw
+logs for that agent before assigning `exact`.
 
 The draft cards and raw logs stay ignored by Git. Only the deterministic tools
 and their contract are versioned here.

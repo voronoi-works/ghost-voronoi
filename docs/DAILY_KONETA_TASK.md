@@ -47,7 +47,7 @@
        --output workbench/candidates/article-images/YYYY-MM-DD-[slug].png \
        --layout 1x3
      ```
-   - ティーザー画像（上半分1〜2コマ目・800x1182）も切り出して `workbench/candidates/article-images/YYYY-MM-DD-[slug]-teaser.jpg` に配置する。
+   - ⚠️ **ティーザー画像（上半分クロップ）は完全廃止**（誤放流事故防止のため、縦スクロール4コマ完成PNG 1枚に完全一本化すること）。
 
 ### 5. プレビュー提示とHuman Gate
 - 成果物は以下の要素をまとめたアーティファクト `preview.md` として提示すること：
