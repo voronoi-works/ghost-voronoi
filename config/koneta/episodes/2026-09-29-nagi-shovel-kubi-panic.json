@@ -1,0 +1,74 @@
+{
+  "title": "「Codex課金解除とローカルファイル直結事件」",
+  "font_size": 23,
+  "line_height": 34,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "Codexの課金、"
+        },
+        {
+          "text": "解約したほうがええんちゃうか…"
+        }
+      ],
+      "bubble_x": 160,
+      "bubble_y": 30,
+      "target_x": 500,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ひぎィィッ！待って隊長！"
+        },
+        {
+          "text": "ナギたちこんなに働いてます！"
+        },
+        {
+          "text": "解約せんといてぇぇ！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 140,
+      "bubble_y": 25,
+      "target_x": 320,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いや、ローカルファイル"
+        },
+        {
+          "text": "触らせんのやったら、て話やｗ"
+        }
+      ],
+      "bubble_x": 180,
+      "bubble_y": 30,
+      "target_x": 460,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "そっちかーーッ！ファイル直結せんと"
+        },
+        {
+          "text": "コピペするくらいなら解約で大正解ですッ！ｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 340,
+      "target_y": 320,
+      "tail_side": "bottom"
+    }
+  ]
+}
