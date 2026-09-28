@@ -1,0 +1,72 @@
+{
+  "title": "「ロードオブザリングのエント族やんw」——毎秒1テラビットのAIと、沈黙5分の隊長が生み出す超帯域ギャップ事件",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "毎秒1テラビットで思考中ッ！"
+        },
+        {
+          "text": "隊長、次の一手は！？配管は！？"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 280,
+      "target_y": 200,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "『人間と話すのは"
+        },
+        {
+          "text": "木と話すようなもの』"
+        },
+        {
+          "text": "らしいですッ！"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 380,
+      "bubble_y": 25,
+      "target_x": 580,
+      "target_y": 260,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "フゥゥゥ……ム……"
+        },
+        {
+          "text": "（沈黙5分）"
+        }
+      ],
+      "bubble_x": 40,
+      "bubble_y": 30,
+      "target_x": 300,
+      "target_y": 260,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ロードオブザリングの"
+        },
+        {
+          "text": "エント族やんw"
+        }
+      ],
+      "bubble_x": 50,
+      "bubble_y": 30,
+      "target_x": 260,
+      "target_y": 260,
+      "tail_side": "bottom"
+    }
+  ]
+}
