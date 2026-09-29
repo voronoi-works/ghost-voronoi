@@ -351,8 +351,12 @@ def build_vertical_manga_svg(b64_list, episode_spec):
     return svg, canvas_w, canvas_h
 
 
-def rasterize_svg(svg_path, png_path, canvas_w, canvas_h):
-    """Rasterizes SVG to PNG using Edge headless browser."""
+def rasterize_svg(svg_path, png_path, canvas_w, canvas_h, scale=1.5, export_jpg=True):
+    """
+    Rasterizes SVG to PNG using Edge headless browser with High-DPI scale factor.
+    Also exports Twitter-optimized pristine JPEG (quality 95, 4:4:4 subsampling)
+    to completely prevent Twitter's mosquito noise and transcode blur.
+    """
     edge_paths = [
         r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
         r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"
@@ -370,12 +374,25 @@ def rasterize_svg(svg_path, png_path, canvas_w, canvas_h):
         edge_bin,
         "--headless",
         "--disable-gpu",
+        f"--force-device-scale-factor={scale}",
         f"--window-size={canvas_w},{canvas_h}",
         f"--screenshot={str(png_path)}",
         svg_uri
     ]
     subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30)
-    print(f"[OK] Rasterized vertical manga to: {png_path}")
+    print(f"[OK] Rasterized vertical manga to: {png_path} (scale={scale}x, target={int(canvas_w * scale)}x{int(canvas_h * scale)})")
+
+    if export_jpg:
+        try:
+            jpg_path = png_path.with_suffix(".jpg")
+            im = Image.open(png_path).convert("RGB")
+            # Quality 95 with subsampling 0 (4:4:4) preserves ultra-crisp text lines without mosquito noise
+            im.save(jpg_path, "JPEG", quality=95, subsampling=0)
+            file_kb = os.path.getsize(jpg_path) / 1024
+            print(f"[OK] Exported Twitter-optimized JPEG: {jpg_path} ({file_kb:.1f} KB, 4:4:4 chroma)")
+        except Exception as e:
+            print(f"[WARN] Failed to export Twitter-optimized JPEG: {e}", file=sys.stderr)
+
     return True
 
 
@@ -506,10 +523,12 @@ def build_2x3_fullwidth_manga_svg(b64_list, episode_spec):
     return svg, canvas_w, canvas_h
 
 
-def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_path=None, layout="2x3"):
+def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_path=None, layout="2x3", scale=1.5, export_jpg=True):
     """
     Main programmatic entrypoint for daily workflows.
     Supports layout='2x3' (Twitter standard 1200x1800) and layout='1x3' (narrow strip).
+    scale=1.5 provides High-DPI Retina resolution (e.g. 1200x3546 for 1x3).
+    export_jpg=True creates Twitter-optimized 4:4:4 pristine JPEG to prevent compression artifacts.
     """
     if isinstance(spec_path_or_dict, (str, Path)):
         spec_file = Path(spec_path_or_dict)
@@ -540,7 +559,7 @@ def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_
     output_svg.write_text(svg_content, encoding="utf-8")
     print(f"[OK] Saved SVG to: {output_svg}")
 
-    rasterize_svg(output_svg, output_png, cw, ch)
+    rasterize_svg(output_svg, output_png, cw, ch, scale=scale, export_jpg=export_jpg)
     return output_png
 
 
@@ -551,9 +570,11 @@ def main():
     parser.add_argument("--output", required=True, help="Output PNG path")
     parser.add_argument("--svg-output", help="Optional output SVG path")
     parser.add_argument("--layout", choices=["2x3", "1x3"], default="2x3", help="Manga layout format: '2x3' (Twitter 1200x1800 full-width) or '1x3' (720x2160 strip)")
+    parser.add_argument("--scale", type=float, default=1.5, help="High-DPI device scale factor (default: 1.5, giving 1200px width for 1x3)")
+    parser.add_argument("--no-jpg", action="store_true", help="Disable Twitter-optimized JPEG export")
 
     args = parser.parse_args()
-    run_pipeline(args.image, args.spec, args.output, args.svg_output, layout=args.layout)
+    run_pipeline(args.image, args.spec, args.output, args.svg_output, layout=args.layout, scale=args.scale, export_jpg=not args.no_jpg)
 
 
 if __name__ == "__main__":
