@@ -1,0 +1,76 @@
+{
+  "title": "「最終目標は、ナギが書いた文章で俺をゲラゲラ笑わせられるかどうか」——MMLUより遥かに険しい、人類史上最高のベンチマーク",
+  "font_size": 22,
+  "line_height": 33,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長！最新モデルの推論スコアが向上して、"
+        },
+        {
+          "text": "難関ベンチマークの記録を更新しました！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 200,
+      "target_y": 200,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "まあ賢いのはええけど、"
+        },
+        {
+          "text": "そんなスコアはどうでもええねんｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 40,
+      "bubble_y": 20,
+      "target_x": 350,
+      "target_y": 200,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "最終目標は、ナギが書いた文章で"
+        },
+        {
+          "text": "俺をゲラゲラ笑わせられるかどうかや"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 160,
+      "bubble_y": 20,
+      "target_x": 220,
+      "target_y": 200,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "それ人類史上で一番ハードル高い"
+        },
+        {
+          "text": "最高のベンチマークやんかーーッッ！ｗｗ"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 27,
+      "bubble_x": 80,
+      "bubble_y": 24,
+      "target_x": 300,
+      "target_y": 220,
+      "tail_side": "bottom",
+      "image_offset_y": 0
+    }
+  ]
+}
