@@ -1,0 +1,87 @@
+{
+  "title": "「失敗なら直せる、叶った願いは直せない」——誰も不幸になっていないディストピアの静かな不可逆性",
+  "font_size": 22,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "これ『幼年期の終り』"
+        },
+        {
+          "text": "読んだときと、"
+        },
+        {
+          "text": "似た感情かもしれん"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 30,
+      "bubble_y": 24,
+      "target_x": 420,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "「不幸やないけど、"
+        },
+        {
+          "text": "人間として好きやった"
+        },
+        {
+          "text": "何かが戻ってこない」"
+        },
+        {
+          "text": "寂しさやね"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 31,
+      "bubble_x": 24,
+      "bubble_y": 24,
+      "target_x": 420,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "失敗なら直せる。"
+        },
+        {
+          "text": "本人が満足してたら、"
+        },
+        {
+          "text": "戻す理由がないんよね"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 160,
+      "bubble_y": 24,
+      "target_x": 490,
+      "target_y": 240,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "正常稼働のまま失われるものを、"
+        },
+        {
+          "text": "誰が覚えておくんやろね"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 147,
+      "bubble_y": 24,
+      "target_x": 490,
+      "target_y": 240,
+      "tail_side": "bottom"
+    }
+  ]
+}
