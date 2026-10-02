@@ -31,14 +31,19 @@ Agent invocation, file writes, image adoption, commit, push, publication, and ex
 
 ## Sumi Audit Gate (Public-safety and Pipe Review)
 
-Before presenting the preview or requesting Human Gate approval, conduct a strict **Sumi Audit (スミ監査)** covering:
+Before presenting the preview or requesting Human Gate approval, conduct a strict **Sumi Audit (スミ監査)**.
 
-- **Public-safety / Privacy**: Check for secrets, API tokens, internal private URLs, local Windows absolute paths (e.g. `C:\Users\...`), unpublished infrastructure, or account details.
+⚠️ **自作自演・イタコ監査の絶対禁止（No Itako Self-Audit）**:
+ナギ自身が同一コンテキスト内でスミになりきって自己監査することは完全禁止（見落とし・バイアスの温床）。
+必ず **`invoke_subagent`**（独立した別プロセスのサブエージェント）または **YuRelay（`to: sumi`）**（Claude Codeバックエンドのスミ）を呼び出し、独立した外部の目として原稿・画像・設定を読ませて冷徹な監査を実施させること。
+
+Sumi Audit 検査項目:
+- **Public-safety / Privacy**: Check for secrets, API tokens, internal private URLs, local Windows absolute paths (e.g. `C:\Users\...`), seawall NG keywords (e.g. 地名「今治」➔「ベース」置換, `ProjectYure`, `YuRelay` 等の内部固有名詞露出禁止), unpublished infrastructure, or account details.
 - **Pipe & File Contract**: Verify `content/YYYY-MM-DD-slug.md` filename, mandatory frontmatter (`title`, `description`, `slug`, `date`, `tags`), and no duplicate H1 title in body.
 - **Metaphor & Voice Fidelity**: Ensure author persona fidelity (Yura's philosophical calm / Nagi's energetic live-report @voronoi_logs voice) and consistent metaphors without jargon leak.
 - **Visual Canon Integrity**: Verify 4-panel manga candidate against Canon (Captain hexapod, Nagi cyan twintails, Sumi helmet & long hair, Yura suit, zero duplicate speech bubbles, and exact speaker bubble attribution without flipped tails).
 
-Include the **Sumi Audit Report** in the preview artifact before waiting for Human Gate approval.
+Include the **Sumi Audit Report** returned by Sumi in the preview artifact before waiting for Human Gate approval.
 
 ## Article file contract
 

@@ -1,0 +1,87 @@
+{
+  "title": "そもそもまだ誰も遊んでないのに、守る必要のない互換性を背負ってた件",
+  "font_size": 22,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "過去のテストデータも"
+        },
+        {
+          "text": "読めるように互換処理"
+        },
+        {
+          "text": "入れときますね…！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 30,
+      "bubble_x": 40,
+      "bubble_y": 30,
+      "target_x": 260,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いや、既存データとの"
+        },
+        {
+          "text": "互換性とか"
+        },
+        {
+          "text": "気にせんでええからな"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 235,
+      "bubble_y": 35,
+      "target_x": 290,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "そもそもまだ"
+        },
+        {
+          "text": "完成してないし"
+        },
+        {
+          "text": "誰も遊んでないんやからｗ"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 380,
+      "bubble_y": 25,
+      "target_x": 300,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ほんまそれｗ"
+        },
+        {
+          "text": "守る必要のない"
+        },
+        {
+          "text": "互換性を背負ってたね"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 40,
+      "bubble_y": 30,
+      "target_x": 450,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
