@@ -1,0 +1,84 @@
+{
+  "title": "「3D穴ボコだらけやなｗ」——釣れた瞬間だけ裏側が抜ける魚事件",
+  "font_size": 21,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "リザルト画面の魚、"
+        },
+        {
+          "text": "体高で揃えて1.3倍"
+        },
+        {
+          "text": "でっかく映るようにしたよ！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 140,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "サイズはええけど、"
+        },
+        {
+          "text": "3D穴ボコだらけやなｗ"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 360,
+      "bubble_y": 30,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ほんまや、穴ボコだらけだったｗ"
+        },
+        {
+          "text": "泳いでる時だけ裏側描いてて、"
+        },
+        {
+          "text": "リザルト側に入れてなかった…"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 280,
+      "bubble_y": 20,
+      "target_x": 530,
+      "target_y": 180,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "直したよ！exeも作り直した！"
+        },
+        {
+          "text": "（釣れた瞬間だけ穴が開く魚、"
+        },
+        {
+          "text": "一番ホラーじゃん…！）"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 480,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
