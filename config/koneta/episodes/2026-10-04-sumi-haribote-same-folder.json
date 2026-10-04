@@ -1,0 +1,84 @@
+{
+  "title": "ハリボテと中身を分けたら、同じフォルダに住んでた",
+  "font_size": 22,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "スミに中身、ユラに"
+        },
+        {
+          "text": "ハリボテ作ってもろて"
+        },
+        {
+          "text": "後でガッチャンコしよ！"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 300,
+      "bubble_y": 30,
+      "target_x": 230,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……って待って。"
+        },
+        {
+          "text": "ユラの作業ファイルもう"
+        },
+        {
+          "text": "同じフォルダに住んでる！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 500,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "このままコミットしたら"
+        },
+        {
+          "text": "他人の作りかけまで"
+        },
+        {
+          "text": "ウチの名前で刻むとこ！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 340,
+      "bubble_y": 30,
+      "target_x": 220,
+      "target_y": 230,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "スミから怒られ案件！"
+        },
+        {
+          "text": "いうて渡しとくわｗ"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 60,
+      "bubble_y": 30,
+      "target_x": 350,
+      "target_y": 280,
+      "tail_side": "right"
+    }
+  ]
+}
