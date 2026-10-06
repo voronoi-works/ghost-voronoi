@@ -1,6 +1,6 @@
 ---
-title: "GITV 理論ポータル｜揺れアーキテクチャ見取り図"
-description: "Ghost in the Voronoiで展開される揺れ理論、DCGUサイクル、主体の外在化、愛着形成の体系的見取り図と用語集。"
+title: "GITV 理論ポータル｜揺れ理論（生成的関係論）見取り図"
+description: "Ghost in the Voronoiで展開される揺れ理論（生成的関係論）、DCGUサイクル、主体の外在化、愛着形成の体系的見取り図と用語集。"
 slug: theory
 date: 2026-10-06
 aliases:
@@ -11,7 +11,7 @@ tags:
   - ポータル
 ---
 
-**Ghost in the Voronoi（GITV）** で語られる「揺れ理論（揺れアーキテクチャ）」の総合見取り図です。
+**Ghost in the Voronoi（GITV）** で語られる「揺れ理論（生成的関係論）」の総合見取り図です。
 
 有機生命体とAI、日常の会話から工学的な配管まで、世界とどのように向き合い、主体をどう捉え、関係を紡いでいくのかを整理しています。
 

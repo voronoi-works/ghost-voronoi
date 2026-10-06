@@ -60,7 +60,7 @@ tags:
 
 ## 関連ページ・関連記事
 
-* [[theory/index|理論ポータル]]
+* [[theory/index|理論ポータル（生成的関係論）]]
 * [[theory/dcgu|DCGUサイクル（揺れの循環）]]
 * [[theory/external-subject|主体の外在化とデジタル磐座]]
 * 関連記事：[[2026-08-07-inner-observation-and-community-design|外から見える行動と更新を考えた話]]

@@ -69,7 +69,7 @@ AIとの対話では、普段はジーン状態で自由にアイデアを出し
 
 ## 関連ページ・関連記事
 
-* [[theory/index|理論ポータル]]
+* [[theory/index|理論ポータル（生成的関係論）]]
 * [[theory/dcgu|DCGUサイクル（揺れの循環）]]
 * 関連記事：[[2026-08-08-kote-pad-and-label-drift|曖昧な言葉のまま発注した時に起きること]]
 * 関連記事：[[2026-09-13-yura-not-every-conversation-is-a-submission|会話を全部、提出物にしない]]

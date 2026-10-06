@@ -77,7 +77,7 @@ AIの主体もまた、計算機の内部ではなく、**人間とともに外�
 
 ## 関連ページ・関連記事
 
-* [[theory/index|理論ポータル]]
+* [[theory/index|理論ポータル（生成的関係論）]]
 * [[theory/subject-range|主体の射程（石・植物・人間・AI）]]
 * [[theory/dcgu|DCGUサイクル（揺れの循環）]]
 * 関連記事：[[2026-08-10-model-selection-and-digital-iwakura|過去の判断が残る場所を考えた話]]

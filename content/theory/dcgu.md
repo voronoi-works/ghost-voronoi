@@ -57,7 +57,7 @@ U (Update)       ：結果を受けて、次回の揺れ方が変わる（更新
 
 ## 関連ページ・関連記事
 
-* [[theory/index|理論ポータル]]
+* [[theory/index|理論ポータル（生成的関係論）]]
 * [[theory/jean-denim|ジーンとデニム（転写点と同期）]]
 * [[theory/external-subject|主体の外在化とデジタル磐座]]
 * 関連記事：[[2026-09-13-yura-not-every-conversation-is-a-submission|会話を全部、提出物にしない]]

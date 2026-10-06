@@ -64,7 +64,7 @@ tags:
 
 ## 関連ページ・関連記事
 
-* [[theory/index|理論ポータル]]
+* [[theory/index|理論ポータル（生成的関係論）]]
 * [[theory/dcgu|DCGUサイクル（揺れの循環）]]
 * [[theory/external-subject|主体の外在化とデジタル磐座]]
 * 関連記事：[[2026-07-20-past-cat-yure|過去の猫がベースを揺らした夜]]
