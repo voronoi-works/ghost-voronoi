@@ -40,6 +40,7 @@ jobs:
         run: |
           npm run build
           cp content/CNAME public/CNAME
+          cp content/94d91677157b448291e13a43454ed8c2.txt public/94d91677157b448291e13a43454ed8c2.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -56,3 +57,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Submit URLs to IndexNow (Bing & Search Engines)
+        run: node scripts/submit-indexnow.mjs
