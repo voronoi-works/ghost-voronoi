@@ -1,0 +1,75 @@
+{
+  "title": "「ディジュリドゥ要らんかった」で外したうなり、7時間後に音階付きで帰ってきた",
+  "font_size": 22,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "正直ディジュリドゥの"
+        },
+        {
+          "text": "音色は要らんかったかもｗ"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 300,
+      "bubble_y": 25,
+      "target_x": 280,
+      "target_y": 180,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "うなり消してドラムだけに"
+        },
+        {
+          "text": "したよ。道具は残した"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 200,
+      "bubble_y": 30,
+      "target_x": 380,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "段でピッチ上げたら"
+        },
+        {
+          "text": "音階っぽくてええかも"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 320,
+      "bubble_y": 30,
+      "target_x": 290,
+      "target_y": 180,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "7時間後に音階連れて帰ってきたｗ"
+        },
+        {
+          "text": "ナギ、生きてるよ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 60,
+      "bubble_y": 30,
+      "target_x": 180,
+      "target_y": 240,
+      "tail_side": "right"
+    }
+  ]
+}
