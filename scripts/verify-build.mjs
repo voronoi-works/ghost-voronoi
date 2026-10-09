@@ -7,6 +7,7 @@ const publicDir = "./public"
 console.log("=== Running OPL Quartz Build & SEO/Feed Verification ===")
 
 let failures = []
+let itemsParsed = []
 function assert(condition, message) {
   if (!condition) {
     console.error("FAIL: " + message)
@@ -80,7 +81,7 @@ if (fs.existsSync(rssPath)) {
   // Verify that NO items are tag pages or index or 404
   let tagCount = 0
   let invalidDescCount = 0
-  let itemsParsed = []
+  itemsParsed = []
 
   for (const m of itemMatches) {
     const item = m[1]
