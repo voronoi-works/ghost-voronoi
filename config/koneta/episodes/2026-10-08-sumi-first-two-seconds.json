@@ -1,0 +1,78 @@
+{
+  "title": "「最初の2秒」を動画の器だと思って、釣りの全工程を5秒に詰め込んでた",
+  "font_size": 22,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "最初の2秒でキャストから"
+        },
+        {
+          "text": "取り込みまで見せて"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 25,
+      "target_x": 520,
+      "target_y": 180,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "投げて、食わせて、釣る！"
+        },
+        {
+          "text": "全工程を5秒に詰めた！"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 25,
+      "target_x": 300,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ちゃうちゃうｗｗ"
+        },
+        {
+          "text": "キャストのシュピーンて音を"
+        },
+        {
+          "text": "2秒以内に聞かせる意味ねｗ"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 160,
+      "bubble_y": 20,
+      "target_x": 240,
+      "target_y": 180,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "2秒は器やなくて締切やった…"
+        },
+        {
+          "text": "てか言い出したのウチやん"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 160,
+      "bubble_y": 25,
+      "target_x": 340,
+      "target_y": 200,
+      "tail_side": "left"
+    }
+  ]
+}
