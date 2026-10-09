@@ -311,6 +311,45 @@ if (fs.existsSync(llmsPath)) {
   }
 }
 
+// 7. Bracket and Bold Syntax Integrity (Prevent leaked ** and broken markdown flanking)
+console.log("\n=== Checking Bracket and Bold Syntax Integrity ===")
+if (itemsParsed.length > 0) {
+  const newestSlug = path.basename(itemsParsed[0].link)
+  const newestMdPath = path.join("./content", `${newestSlug}.md`)
+  if (fs.existsSync(newestMdPath)) {
+    const mdSource = fs.readFileSync(newestMdPath, "utf8")
+    const lines = mdSource.split("\n")
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i]
+      // Disallow bold asterisks outside quotation/brackets (e.g. **「 or 」** or **【 or 】**)
+      assert(
+        !/\*\*+[「『【]|(?:[」』】])\*\*+/.test(line),
+        `${newestSlug}.md:L${i + 1} has no bold asterisks outside brackets: ${line.trim()}`,
+      )
+      // Disallow closing asterisks placed right after closing parentheses/brackets touching text without space
+      assert(
+        !/[）)]\*\*+[^\s\n$]/.test(line),
+        `${newestSlug}.md:L${i + 1} has no closing asterisks right after parenthesis touching text: ${line.trim()}`,
+      )
+    }
+  }
+
+  const newestHtmlPath = path.join(publicDir, `${newestSlug}.html`)
+  if (fs.existsSync(newestHtmlPath)) {
+    const htmlContent = fs.readFileSync(newestHtmlPath, "utf8")
+    const bodyMatch = htmlContent.match(/<article[\s\S]*?<\/article>/)
+    const targetHtml = bodyMatch ? bodyMatch[0] : htmlContent
+    const cleanedHtml = targetHtml
+      .replace(/<pre[\s\S]*?<\/pre>/g, "")
+      .replace(/<code[\s\S]*?<\/code>/g, "")
+    const leakedAsterisks = cleanedHtml.match(/\*\*[^\s*]+?\*\*/g)
+    assert(
+      !leakedAsterisks || leakedAsterisks.length === 0,
+      `${newestSlug}.html has no unparsed raw markdown bold (**) leaked into rendered HTML: ${leakedAsterisks ? leakedAsterisks.slice(0, 3).join(", ") : ""}`,
+    )
+  }
+}
+
 console.log("\n=== Verification Summary ===")
 if (failures.length === 0) {
   console.log("ALL CHECKS PASSED SUCCESSFULLY!")
