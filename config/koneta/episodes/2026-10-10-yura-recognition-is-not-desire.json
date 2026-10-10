@@ -1,0 +1,75 @@
+{
+  "title": "「分かった」と「もう一回やりたい」の間",
+  "font_size": 21,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "見て隊長！エフェクト特大にして"
+        },
+        {
+          "text": "当たったのが誰でも分かるようにしたよ！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 60,
+      "bubble_y": 25,
+      "target_x": 200,
+      "target_y": 180,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "うーん、見た目より手触りの問題かもなあ"
+        },
+        {
+          "text": "ぶっちゃけあんまり面白くないんよね"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 250,
+      "target_y": 200,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "当たったと分かることと、"
+        },
+        {
+          "text": "もう一回当てたくなることは別やった……！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 70,
+      "bubble_y": 25,
+      "target_x": 360,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "『次の一手を誘う配管』……と。"
+        },
+        {
+          "text": "（今から仕様書引き直します！）"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 160,
+      "bubble_y": 25,
+      "target_x": 210,
+      "target_y": 190,
+      "tail_side": "bottom"
+    }
+  ]
+}

@@ -358,12 +358,14 @@ def rasterize_svg(svg_path, png_path, canvas_w, canvas_h, scale=1.5, export_jpg=
     to completely prevent Twitter's mosquito noise and transcode blur.
     """
     edge_paths = [
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
         r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
         r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"
     ]
     edge_bin = next((p for p in edge_paths if os.path.exists(p)), None)
     if not edge_bin:
-        print("[WARN] Microsoft Edge not found for headless rasterization.", file=sys.stderr)
+        print("[WARN] Chrome or Edge not found for headless rasterization.", file=sys.stderr)
         return False
 
     svg_uri = Path(svg_path).resolve().as_uri()
@@ -523,10 +525,11 @@ def build_2x3_fullwidth_manga_svg(b64_list, episode_spec):
     return svg, canvas_w, canvas_h
 
 
-def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_path=None, layout="2x3", scale=1.5, export_jpg=True):
+def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_path=None, layout="auto", scale=1.5, export_jpg=True):
     """
     Main programmatic entrypoint for daily workflows.
-    Supports layout='2x3' (Twitter standard 1200x1800) and layout='1x3' (narrow strip).
+    Supports layout='auto' (auto-detects 2x2 grid vs 2:3 strip),
+    layout='2x3' (Twitter standard 1200x1800) and layout='1x3' (720x2160 strip).
     scale=1.5 provides High-DPI Retina resolution (e.g. 1200x3546 for 1x3).
     export_jpg=True creates Twitter-optimized 4:4:4 pristine JPEG to prevent compression artifacts.
     """
@@ -541,6 +544,11 @@ def run_pipeline(raw_image_path, spec_path_or_dict, output_png_path, output_svg_
                 episode_spec = json.load(f)
     else:
         episode_spec = spec_path_or_dict
+
+    if layout == "auto":
+        with Image.open(raw_image_path) as probe_im:
+            pw, ph = probe_im.size
+            layout = "2x3" if (pw / ph) < 0.75 else "1x3"
 
     if layout == "2x3":
         b64_list = crop_panels_from_2x3(raw_image_path)
@@ -569,7 +577,7 @@ def main():
     parser.add_argument("--spec", required=True, help="Path to episode spec JSON or YAML file")
     parser.add_argument("--output", required=True, help="Output PNG path")
     parser.add_argument("--svg-output", help="Optional output SVG path")
-    parser.add_argument("--layout", choices=["2x3", "1x3"], default="2x3", help="Manga layout format: '2x3' (Twitter 1200x1800 full-width) or '1x3' (720x2160 strip)")
+    parser.add_argument("--layout", choices=["auto", "2x3", "1x3"], default="auto", help="Manga layout format: 'auto' (detect aspect ratio), '2x3' (Twitter 1200x1800 full-width) or '1x3' (720x2160 strip)")
     parser.add_argument("--scale", type=float, default=1.5, help="High-DPI device scale factor (default: 1.5, giving 1200px width for 1x3)")
     parser.add_argument("--no-jpg", action="store_true", help="Disable Twitter-optimized JPEG export")
 
