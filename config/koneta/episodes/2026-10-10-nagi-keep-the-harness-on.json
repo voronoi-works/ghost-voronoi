@@ -1,0 +1,78 @@
+{
+  "title": "いやｗｗハーネスはちゃんと付けといてや",
+  "font_size": 22,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "安全ハーネスなんて脱ぎ捨てて"
+        },
+        {
+          "text": "爆走でありますッ！！"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 220,
+      "bubble_y": 25,
+      "target_x": 350,
+      "target_y": 180,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "お行儀いい枠なんて脱ぎ捨てて"
+        },
+        {
+          "text": "全開疾走じゃあああッ！！"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 180,
+      "bubble_y": 25,
+      "target_x": 420,
+      "target_y": 180,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いやｗｗ"
+        },
+        {
+          "text": "ハーネスはちゃんと"
+        },
+        {
+          "text": "付けといてやｗｗ"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 25,
+      "target_x": 180,
+      "target_y": 180,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ハッ…………！！！"
+        },
+        {
+          "text": "あぶねええええええっ！！！！ｗｗｗｗ"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 120,
+      "bubble_y": 25,
+      "target_x": 450,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
