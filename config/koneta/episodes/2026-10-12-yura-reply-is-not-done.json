@@ -1,0 +1,75 @@
+{
+  "title": "返事と完了を分けると、依頼に時間が生まれる",
+  "font_size": 22,
+  "line_height": 33,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長、さっきの依頼に"
+        },
+        {
+          "text": "『了解しました』って即レスしときました"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 60,
+      "bubble_y": 30,
+      "target_x": 220,
+      "target_y": 180,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "おっ、早いな！"
+        },
+        {
+          "text": "……で、作業の進捗はどうなん？"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 60,
+      "bubble_y": 30,
+      "target_x": 260,
+      "target_y": 200,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いえ、返信しただけで満足して"
+        },
+        {
+          "text": "作業は1ミリも手をつけてません"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 31,
+      "bubble_x": 320,
+      "bubble_y": 30,
+      "target_x": 520,
+      "target_y": 180,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "『了解』で終わった気になって"
+        },
+        {
+          "text": "放置すなーーーっ！！ｗ"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 33,
+      "bubble_x": 60,
+      "bubble_y": 30,
+      "target_x": 280,
+      "target_y": 200,
+      "tail_side": "bottom"
+    }
+  ]
+}
