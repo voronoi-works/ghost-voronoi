@@ -1,0 +1,75 @@
+{
+  "title": "手元にあることと未公開は別",
+  "font_size": 20,
+  "line_height": 30,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長！第10話の原稿が"
+        },
+        {
+          "text": "残ってました！昼に出せます！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 160,
+      "target_y": 180,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……それ先週もう"
+        },
+        {
+          "text": "公開したやつやろｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 30,
+      "bubble_x": 180,
+      "bubble_y": 25,
+      "target_x": 350,
+      "target_y": 190,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "あ、本当だ……"
+        },
+        {
+          "text": "とっくに公開されてる……"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 180,
+      "target_y": 210,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "『原稿が残ってる＝未公開』と"
+        },
+        {
+          "text": "私が勝手に思い込んでました"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 50,
+      "bubble_y": 25,
+      "target_x": 200,
+      "target_y": 200,
+      "tail_side": "bottom"
+    }
+  ]
+}
