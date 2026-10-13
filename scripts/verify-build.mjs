@@ -341,8 +341,8 @@ for (const mdPath of allMdFiles) {
       assert(false, `${mdPath}:L${i + 1} has bold asterisks outside brackets: ${line.trim()}`)
       mdSyntaxErrors++
     }
-    if (/[）)]\*\*+[^\s\n$]/.test(line)) {
-      assert(false, `${mdPath}:L${i + 1} has closing asterisks right after parenthesis touching text: ${line.trim()}`)
+    if (/[）)！!？?…・]\*\*+[^\s\n$」』】）)（(]/.test(line)) {
+      assert(false, `${mdPath}:L${i + 1} has closing asterisks right after punctuation touching text: ${line.trim()}`)
       mdSyntaxErrors++
     }
   }
