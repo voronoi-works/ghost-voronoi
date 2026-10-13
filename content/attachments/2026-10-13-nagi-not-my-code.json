@@ -1,0 +1,75 @@
+{
+  "title": "おれはpythonの波形スキャンなんかしてないぞ",
+  "font_size": 22,
+  "line_height": 33,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長の書いたスクリプト、"
+        },
+        {
+          "text": "完璧に動いてますっ！！"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 33,
+      "bubble_x": 260,
+      "bubble_y": 40,
+      "target_x": 200,
+      "target_y": 260,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "おれはpythonの"
+        },
+        {
+          "text": "波形スキャンなんかしてないぞｗ"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 32,
+      "bubble_x": 190,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 240,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ハッ…………！！！？"
+        },
+        {
+          "text": "えっ、じゃあこれ誰のコード……！？"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 40,
+      "target_x": 220,
+      "target_y": 280,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ナギが自分で書いたやつやーーッ！！"
+        },
+        {
+          "text": "自画自賛してもうてたーーッ！！ｗｗｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 30,
+      "bubble_x": 60,
+      "bubble_y": 35,
+      "target_x": 250,
+      "target_y": 280,
+      "tail_side": "right"
+    }
+  ]
+}
