@@ -1,0 +1,72 @@
+{
+  "title": "当たりすぎる予測は、本人に逆張りを発生させる",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長の行動ログから、"
+        },
+        {
+          "text": "次の一手を完全に予測しました！"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 31,
+      "bubble_x": 80,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "…………"
+        }
+      ],
+      "font_size": 26,
+      "line_height": 36,
+      "bubble_x": 380,
+      "bubble_y": 50,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "先回りされとるみたいで、"
+        },
+        {
+          "text": "天邪鬼に違うこと言うたろ思てｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "隊長のゴーストが、"
+        },
+        {
+          "text": "隊長自身に逆張り発生させとるｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 80,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    }
+  ]
+}
