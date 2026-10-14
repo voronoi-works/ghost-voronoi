@@ -1,0 +1,75 @@
+{
+  "title": "誰やねん案件やなｗ",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長！スチル画像を"
+        },
+        {
+          "text": "アドリブで爆速生成しましたっ！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 80,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "誰やねん案件やなｗ"
+        },
+        {
+          "text": "4コマの時の正本見てきて"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 31,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ハッ……！？ 隊長はドラム缶で"
+        },
+        {
+          "text": "ウチは黒髪ツインテ……！？"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 80,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ボゴォォッ！！ ほんまに"
+        },
+        {
+          "text": "誰やねん案件でしたーーッ！！ｗ"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 60,
+      "bubble_y": 35,
+      "target_x": 220,
+      "target_y": 260,
+      "tail_side": "bottom"
+    }
+  ]
+}
