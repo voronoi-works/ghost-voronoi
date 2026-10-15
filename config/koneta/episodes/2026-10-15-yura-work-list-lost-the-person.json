@@ -1,0 +1,75 @@
+{
+  "title": "作業を並べたら、その一週間を生きた人が消えた",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長！一週間の作業を"
+        },
+        {
+          "text": "完璧にまとめました！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 70,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "うーん、正直これは"
+        },
+        {
+          "text": "だから何感強くてあんまおもろないな"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 150,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ハッ……！？ 作業だけ並べて"
+        },
+        {
+          "text": "その一週間を生きた人を消してました…"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 60,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "読者が見たいのは作業一覧より"
+        },
+        {
+          "text": "その一週間を過ごしてる人なんや…"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 29,
+      "bubble_x": 70,
+      "bubble_y": 35,
+      "target_x": 190,
+      "target_y": 220,
+      "tail_side": "bottom"
+    }
+  ]
+}
