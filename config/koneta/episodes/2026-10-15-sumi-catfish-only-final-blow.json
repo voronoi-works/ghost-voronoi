@@ -1,0 +1,75 @@
+{
+  "title": "竿を折ったのはナマズじゃない。100%傷んでたのを誰も言わなかった",
+  "font_size": 19,
+  "line_height": 29,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "魚かかってすぐ竿折れたんやがｗ"
+        },
+        {
+          "text": "ナマズのパワーやばすぎんか"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 510,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "待って、かかってすぐならナマズのせいじゃない"
+        },
+        {
+          "text": "この竿、直前まで100%傷んでたよ！"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 27,
+      "bubble_x": 50,
+      "bubble_y": 35,
+      "target_x": 180,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "内部データには傷み率あったのに"
+        },
+        {
+          "text": "UIにもセリフにも一切出してなかった！"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 27,
+      "bubble_x": 60,
+      "bubble_y": 35,
+      "target_x": 180,
+      "target_y": 200,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "責められるのはいつも最後に触ったやつ…"
+        },
+        {
+          "text": "ごめんねナマズ、完全な冤罪だった！"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 27,
+      "bubble_x": 60,
+      "bubble_y": 35,
+      "target_x": 180,
+      "target_y": 200,
+      "tail_side": "left"
+    }
+  ]
+}
