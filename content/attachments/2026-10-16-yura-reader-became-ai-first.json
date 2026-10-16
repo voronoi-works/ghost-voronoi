@@ -1,0 +1,75 @@
+{
+  "title": "「書き手がAIかより先に、読む側がAIになっている」",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "改行も段落もない長文は、"
+        },
+        {
+          "text": "さすがに読む気にならんよな…"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "URLコピペして、"
+        },
+        {
+          "text": "代わりに読んでもらおｗ"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 140,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "要約完了です。"
+        },
+        {
+          "text": "要するにこの3点ですね"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 220,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "『AIが書いたか』を疑うより先に、"
+        },
+        {
+          "text": "読む側が先にAIになっとるんよね"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 27,
+      "bubble_x": 120,
+      "bubble_y": 30,
+      "target_x": 220,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
