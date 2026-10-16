@@ -1,0 +1,75 @@
+{
+  "title": "「確認用の起動フラグが、隊長の49日目を食った」",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "ごめん隊長、ウチが"
+        },
+        {
+          "text": "49日目のセーブデータ消しちゃった…"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 220,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "セーブは別に消えてええでｗ"
+        },
+        {
+          "text": "なんならゲーム内で消せるようにして"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "Escメニューに"
+        },
+        {
+          "text": "『保存を消して最初から』ボタン実装完了！"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 27,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 220,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……押すとセーブが消えるから、テストしてない。"
+        },
+        {
+          "text": "（いやもう消してんのよウチ）"
+        }
+      ],
+      "font_size": 16,
+      "line_height": 26,
+      "bubble_x": 110,
+      "bubble_y": 30,
+      "target_x": 220,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
