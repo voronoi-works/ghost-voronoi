@@ -1,0 +1,75 @@
+{
+  "title": "「一枚出たことと、動いたことは別なんよね」",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "隊長！ローカルの動画生成、"
+        },
+        {
+          "text": "バッチリ完走しました！"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……ん？ これ"
+        },
+        {
+          "text": "動画になってなくない？ｗ"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 140,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ハッ……！フレーム出ただけで"
+        },
+        {
+          "text": "動きの確認が抜けてました…"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "一枚出たことと、動いたことは"
+        },
+        {
+          "text": "全く別なんよね……"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
