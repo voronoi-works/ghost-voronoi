@@ -1,0 +1,72 @@
+{
+  "title": "「部品0個のバギーが、もう道を塞いでた」",
+  "font_size": 26,
+  "line_height": 40,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "キャンプ地探索、順調やで〜！"
+        }
+      ],
+      "font_size": 25,
+      "line_height": 38,
+      "bubble_x": 260,
+      "bubble_y": 30,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "痛ッ！？ な、なんやここ"
+        },
+        {
+          "text": "何もないのに通れんぞ！？"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 250,
+      "bubble_y": 30,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "0/5やのにオブジェクトがあって"
+        },
+        {
+          "text": "障害物になってるんやが…"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 40,
+      "bubble_y": 30,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "部品0個なのに、当たり判定だけ"
+        },
+        {
+          "text": "先に完成してました…"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 240,
+      "bubble_y": 30,
+      "target_x": 200,
+      "target_y": 240,
+      "tail_side": "left"
+    }
+  ]
+}

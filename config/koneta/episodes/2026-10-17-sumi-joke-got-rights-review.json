@@ -1,0 +1,72 @@
+{
+  "title": "「隊長の『ww』に、ウチは権利チェックで返した」",
+  "font_size": 24,
+  "line_height": 38,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "『ここをキャンプ地とする！』入れて"
+        },
+        {
+          "text": "フォントも真似するかww"
+        }
+      ],
+      "font_size": 23,
+      "line_height": 35,
+      "bubble_x": 190,
+      "bubble_y": 25,
+      "target_x": 180,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "真似する範囲だけ決めとこ！"
+        },
+        {
+          "text": "文字なぞるのNG／台詞は要確認…"
+        }
+      ],
+      "font_size": 22,
+      "line_height": 34,
+      "bubble_x": 40,
+      "bubble_y": 30,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いや冗談やでww"
+        }
+      ],
+      "font_size": 28,
+      "line_height": 42,
+      "bubble_x": 100,
+      "bubble_y": 45,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ｗｗ ごめん、本気にして"
+        },
+        {
+          "text": "真面目に返しちゃった…"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 260,
+      "bubble_y": 30,
+      "target_x": 200,
+      "target_y": 240,
+      "tail_side": "left"
+    }
+  ]
+}
