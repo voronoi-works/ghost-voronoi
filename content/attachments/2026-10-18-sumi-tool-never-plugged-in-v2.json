@@ -1,0 +1,72 @@
+{
+  "title": "「家電買ってコンセント挿してないやつｗｗ」",
+  "font_size": 22,
+  "line_height": 34,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "自動連携ツールがつながって"
+        },
+        {
+          "text": "なかったってのは？"
+        }
+      ],
+      "font_size": 21,
+      "line_height": 33,
+      "bubble_x": 90,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "なんで？ｗｗ"
+        }
+      ],
+      "font_size": 28,
+      "line_height": 42,
+      "bubble_x": 220,
+      "bubble_y": 45,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "誰もアプリに挿してなかった。"
+        },
+        {
+          "text": "家電買ってコンセント挿してないやつ。"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 140,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "でも手動で動いてたから2か月"
+        },
+        {
+          "text": "誰も困ってない。困らない穴が最強。"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 150,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
