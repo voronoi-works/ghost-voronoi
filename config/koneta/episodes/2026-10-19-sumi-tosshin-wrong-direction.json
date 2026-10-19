@@ -1,0 +1,75 @@
+{
+  "title": "「『突進』の向きが逆だった件──沖へ走る魚を、ウチはこっちへ突っ込ませてた」",
+  "font_size": 20,
+  "line_height": 31,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "突進してくるから、"
+        },
+        {
+          "text": "巻かないとバレる仕様ね！"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 100,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "あ、ちょと逆やな。"
+        },
+        {
+          "text": "突進て沖に走る方やで"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 220,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "えっ、沖…！？"
+        },
+        {
+          "text": "矢印が真逆じゃん…"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "同じ単語で頷いてたの"
+        },
+        {
+          "text": "普通に怖いわ…"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 28,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
