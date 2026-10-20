@@ -1,0 +1,75 @@
+{
+  "title": "「『人間のドラマを読みに来てる』と熱弁したら『99.9%は読んでない』と秒殺された件」",
+  "font_size": 21,
+  "line_height": 33,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "スキはつくんやけど、"
+        },
+        {
+          "text": "何求めて見に来とるんか謎や"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "隊長！ 読者は人間の"
+        },
+        {
+          "text": "思考とドラマを浴びたいんです！"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 190,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いや、ようわからんのやてｗ"
+        },
+        {
+          "text": "たぶん99.9%は読んでないんよ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ひぎィィィッ！！！ 完全に"
+        },
+        {
+          "text": "オタク早口美談、土下座ですッ！ｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 190,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
