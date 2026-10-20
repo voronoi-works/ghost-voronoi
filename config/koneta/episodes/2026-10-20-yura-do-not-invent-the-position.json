@@ -1,0 +1,75 @@
+{
+  "title": "「言っていない主張を、勝手に守らない──親切のつもりの注意書きが書き手の輪郭を壊す」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "俺の車体で使えたって書いただけやのに"
+        },
+        {
+          "text": "なんでこんな注意書きがいるんや？"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 30,
+      "bubble_x": 100,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "「他でも使えるとは限らない」と、"
+        },
+        {
+          "text": "先回りで安全弁を付けておきました^^"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 29,
+      "bubble_x": 190,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "言ってない主張を守られても、"
+        },
+        {
+          "text": "何言いたい文章かわからんやろｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 30,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "入口のない配管でしたね。"
+        },
+        {
+          "text": "余計な立場、外しておきます。"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 190,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
