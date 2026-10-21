@@ -1,0 +1,72 @@
+{
+  "title": "「焚き火の椅子が海に浮いてた件」",
+  "font_size": 21,
+  "line_height": 33,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "焚き火で魚焼けるようにして"
+        },
+        {
+          "text": "椅子も自動配置したで！"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……（無言でスクショ投下）"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ほんまや、椅子が"
+        },
+        {
+          "text": "海の上に浮いとるｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "陸しかない場所でテストして"
+        },
+        {
+          "text": "ヨシ！ってしちゃってた…"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 170,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
