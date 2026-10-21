@@ -1,0 +1,75 @@
+{
+  "title": "「遠出したら餓死しかけた件」",
+  "font_size": 21,
+  "line_height": 33,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "徒歩で別エリア行けるように"
+        },
+        {
+          "text": "しといたで！"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "魚はめっちゃ釣れるんやが"
+        },
+        {
+          "text": "腹減りで死にそうや…"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "野営地以外で魚焼けんくて"
+        },
+        {
+          "text": "餓死してまうわｗｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "出かけると死ぬゲームに"
+        },
+        {
+          "text": "なっとった…ｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
