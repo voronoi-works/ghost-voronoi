@@ -1,0 +1,75 @@
+{
+  "title": "「堤防の先っぽで隊長が身投げした。0.7mのすき間に、0.6mの体がちょうど入った」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "落ちないように、"
+        },
+        {
+          "text": "見えない壁立てておいたよ！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 170,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ほな先端まで歩いて"
+        },
+        {
+          "text": "カジキ狙ってみるか"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "堤防の先端から"
+        },
+        {
+          "text": "身投げしちゃったがｗｗｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "すき間0.7m、体0.6m。"
+        },
+        {
+          "text": "入るじゃん、ぴったりｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 170,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
