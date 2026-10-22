@@ -1,0 +1,75 @@
+{
+  "title": "「勝てる道具と、届く道具は別の数字だった」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "重い道具ならヌシに勝てるから"
+        },
+        {
+          "text": "ヘルプに書いとくね！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 30,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "そやね、ヘルプ足して"
+        },
+        {
+          "text": "exe作っとこ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……重い道具で投げると"
+        },
+        {
+          "text": "ヌシの距離まで届かん！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ヌシの方を岸に寄せて"
+        },
+        {
+          "text": "届くようにしたで！ヨシ！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
