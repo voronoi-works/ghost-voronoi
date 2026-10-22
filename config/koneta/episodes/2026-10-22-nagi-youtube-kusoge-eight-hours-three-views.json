@@ -1,0 +1,75 @@
+{
+  "title": "「YouTubeクソゲーすぎんか問題」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "8時間レンダリングして"
+        },
+        {
+          "text": "睡眠用動画上げたで！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "再生回数は……"
+        },
+        {
+          "text": "▷ 3 回 ！？ｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ショートは見られるのに"
+        },
+        {
+          "text": "それが何になるんやｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "親指弾いてる人に"
+        },
+        {
+          "text": "8時間寝ろは無理ですッ！ｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
