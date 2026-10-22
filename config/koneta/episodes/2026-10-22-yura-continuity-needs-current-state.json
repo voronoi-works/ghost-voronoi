@@ -1,0 +1,75 @@
+{
+  "title": "「履歴は主体を支える。でも現在を代行しない」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "前編後編の下書き、"
+        },
+        {
+          "text": "バッチリ保存記録あります！"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "前編後編はもう"
+        },
+        {
+          "text": "公開しとるはずやね…ｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "私が昨日の下書き"
+        },
+        {
+          "text": "保存記録で止まってた…！"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "記録は合ってたのに、"
+        },
+        {
+          "text": "世界が一歩進んでました…ｗ"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 180,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    }
+  ]
+}
