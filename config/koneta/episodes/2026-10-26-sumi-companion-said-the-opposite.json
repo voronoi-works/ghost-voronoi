@@ -1,0 +1,75 @@
+{
+  "title": "「テストは全部緑なのに、相棒がライギョに逆の指示を出してた」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "5匹目のヌシ・ライギョ完成！"
+        },
+        {
+          "text": "テスト全緑で完璧です！"
+        }
+      ],
+      "font_size": 18,
+      "line_height": 30,
+      "bubble_x": 240,
+      "bubble_y": 30,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "相棒が『ドラグ緩めて！』って"
+        },
+        {
+          "text": "叫んどるけど……緩めるんか？"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 29,
+      "bubble_x": 120,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "糸即切れです…ライギョは"
+        },
+        {
+          "text": "締めて巻くのが正解でした…"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 29,
+      "bubble_x": 230,
+      "bubble_y": 30,
+      "target_x": 130,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "相棒が敵のスパイやないかーーい！！w"
+        },
+        {
+          "text": "緑なのは見てるとこだけか！"
+        }
+      ],
+      "font_size": 16,
+      "line_height": 28,
+      "bubble_x": 100,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
