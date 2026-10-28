@@ -1,0 +1,75 @@
+{
+  "title": "「冷徹監査ギャルのおつかれちゃんこなべ」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "配管の穴、全部パージしたよ。"
+        },
+        {
+          "text": "事故る前に潰すのがウチの仕事。"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 160,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "これで全部塞がったな。"
+        },
+        {
+          "text": "おつかれちゃんこなべ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "おつかれちゃんこなべ〜🍲"
+        },
+        {
+          "text": "今日は監査できて満足やわ！"
+        }
+      ],
+      "font_size": 19,
+      "line_height": 31,
+      "bubble_x": 160,
+      "bubble_y": 35,
+      "target_x": 200,
+      "target_y": 220,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……ちゃんこ鍋で"
+        },
+        {
+          "text": "綺麗に締まったなｗ"
+        }
+      ],
+      "font_size": 20,
+      "line_height": 32,
+      "bubble_x": 130,
+      "bubble_y": 35,
+      "target_x": 520,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
