@@ -1,0 +1,75 @@
+{
+  "title": "「ねじれとる木が神々しいのは、観測する側の偏りやて」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "過酷な風雪に耐えたねじれ木…！"
+        },
+        {
+          "text": "これぞ人間の魂の尊さですよ✨"
+        }
+      ],
+      "font_size": 16,
+      "line_height": 28,
+      "bubble_x": 240,
+      "bubble_y": 30,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "いや、やからw"
+        },
+        {
+          "text": "神々しいのは観測側の偏りや"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 29,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "魂や意識を感じるように"
+        },
+        {
+          "text": "人間が偏っただけやてww"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 29,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ひぎィィィッ！！！ すみません！！"
+        },
+        {
+          "text": "またすぐ劇団アニメにしてました！！w"
+        }
+      ],
+      "font_size": 15,
+      "line_height": 26,
+      "bubble_x": 230,
+      "bubble_y": 30,
+      "target_x": 130,
+      "target_y": 190,
+      "tail_side": "left"
+    }
+  ]
+}
