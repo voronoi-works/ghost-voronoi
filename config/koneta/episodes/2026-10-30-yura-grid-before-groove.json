@@ -1,0 +1,75 @@
+{
+  "title": "「揺らす前に、まず同じ拍へ立つ」",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "グルーヴ重視で"
+        },
+        {
+          "text": "ドラム打ちました！✨"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……これ全部"
+        },
+        {
+          "text": "拍がズレとらんか？ｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "クォンタイズしたら"
+        },
+        {
+          "text": "だいぶマシやｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "あーそこかｗ"
+        },
+        {
+          "text": "ズレ強すぎましたね"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    }
+  ]
+}

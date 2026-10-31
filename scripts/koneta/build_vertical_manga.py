@@ -34,6 +34,11 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
 
+# Mobile Readability & De-ka Moji Canon Constants
+DEFAULT_FONT_SIZE = 24
+MIN_FONT_SIZE = 22
+DEFAULT_LINE_HEIGHT_RATIO = 1.48
+
 
 def detect_or_default_boxes(im, inset=4):
     """
@@ -108,7 +113,7 @@ def crop_panels_to_b64(raw_image_path):
     return b64_list
 
 
-def estimate_text_width(text, font_size=20):
+def estimate_text_width(text, font_size=DEFAULT_FONT_SIZE):
     """Accurately calculates display pixel width for Japanese & ASCII characters."""
     w = 0.0
     for ch in text:
@@ -119,7 +124,7 @@ def estimate_text_width(text, font_size=20):
     return int(w)
 
 
-def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="auto", tail_len=26, radius=16, font_size=20, line_height=30):
+def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="auto", tail_len=26, radius=16, font_size=DEFAULT_FONT_SIZE, line_height=35):
     """
     Auto-fits bubble dimensions from text length and lines,
     and dynamically aims a short vector tail toward (target_x, target_y).
@@ -139,6 +144,13 @@ def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="au
             tail_side = "left"
         else:
             tail_side = "bottom"
+
+    # Anti-Vertical-Drop Layout Correction:
+    # Ensure bubble does not awkwardly overlap the speaker or force a vertical-down tail.
+    if tail_side == "left" and bx < target_x + 50:
+        bx = max(bx, target_x + 70)
+    elif tail_side == "right" and bx + bw > target_x - 50:
+        bx = min(bx, target_x - bw - 70)
 
     r = radius
     d = []
@@ -171,8 +183,13 @@ def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="au
     elif tail_side == "right":
         ax = bx + bw
         ay = max(by + r + 20, min(by + bh - r - 20, target_y))
-        eff_tx = max(ax + 10, target_x)
+        eff_tx = max(ax + 20, target_x)
         angle = math.atan2(target_y - ay, eff_tx - ax)
+        # Anti-vertical guard: ensure natural diagonal aiming
+        if target_y >= ay:
+            angle = min(angle, math.radians(58))
+        else:
+            angle = max(angle, math.radians(-58))
         tip_x = ax + tail_len * math.cos(angle)
         tip_y = ay + tail_len * math.sin(angle)
 
@@ -197,11 +214,15 @@ def generate_speech_bubble(lines_spec, bx, by, target_x, target_y, tail_side="au
     elif tail_side == "left":
         ax = bx
         ay = max(by + r + 20, min(by + bh - r - 20, target_y))
-        eff_tx = min(ax - 10, target_x)
+        eff_tx = min(ax - 20, target_x)
         angle = math.atan2(target_y - ay, eff_tx - ax)
+        # Anti-vertical guard: ensure natural diagonal aiming
+        if target_y >= ay:
+            angle = max(angle, math.radians(122))
+        else:
+            angle = min(angle, math.radians(-122))
         tip_x = ax + tail_len * math.cos(angle)
         tip_y = ay + tail_len * math.sin(angle)
-
 
         rw = 12
         base_top = ay - rw
@@ -304,8 +325,11 @@ def build_vertical_manga_svg(b64_list, episode_spec):
             tx = px + spec.get("target_x", 365 if i != 1 else 535)
             ty = py + spec.get("target_y", 240 if i != 1 else 190)
             tail_side = spec.get("tail_side", "auto")
-            font_size = spec.get("font_size", episode_spec.get("font_size", 24))
-            line_height = spec.get("line_height", episode_spec.get("line_height", int(font_size * 1.45)))
+            font_size = spec.get("font_size", episode_spec.get("font_size", DEFAULT_FONT_SIZE))
+            if font_size < MIN_FONT_SIZE:
+                print(f"[WARN] Panel {i+1} font_size ({font_size}px) is below minimum ({MIN_FONT_SIZE}px). Enforcing {MIN_FONT_SIZE}px for mobile readability.")
+                font_size = MIN_FONT_SIZE
+            line_height = spec.get("line_height", episode_spec.get("line_height", int(font_size * DEFAULT_LINE_HEIGHT_RATIO)))
 
             bubble_markup, _, _ = generate_speech_bubble(
                 lines_spec, bx, by, tx, ty, tail_side=tail_side, tail_len=26,
@@ -469,8 +493,11 @@ def build_2x3_fullwidth_manga_svg(b64_list, episode_spec):
         else:
             lines = dialogue
 
-        font_size = d_spec.get("font_size", episode_spec.get("font_size", 22))
-        line_height = d_spec.get("line_height", episode_spec.get("line_height", int(font_size * 1.5)))
+        font_size = d_spec.get("font_size", episode_spec.get("font_size", DEFAULT_FONT_SIZE))
+        if font_size < MIN_FONT_SIZE:
+            print(f"[WARN] Panel {i+1} font_size ({font_size}px) is below minimum ({MIN_FONT_SIZE}px). Enforcing {MIN_FONT_SIZE}px for mobile readability.")
+            font_size = MIN_FONT_SIZE
+        line_height = d_spec.get("line_height", episode_spec.get("line_height", int(font_size * DEFAULT_LINE_HEIGHT_RATIO)))
 
         bx = px + (d_spec.get("bx") if "bx" in d_spec else d_spec.get("bubble_x", 30))
         by = py + (d_spec.get("by") if "by" in d_spec else d_spec.get("bubble_y", 20))
