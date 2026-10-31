@@ -548,17 +548,45 @@ def save_checkpoint(registry: ArtifactRegistry, newly_emitted_turns: List[Dict])
 # ==========================================
 
 def score_turn_for_koneta(user_msg: str, model_msg: str, agent: str) -> int:
-    """小ネタとしての尖り・面白さ・摩擦スコアを計算"""
+    """小ネタとしての尖り・面白さ・摩擦スコアを計算（内輪ネタは厳格に除外）"""
     if len(user_msg) < 5 or len(user_msg) > 300:
         return 0
     if len(model_msg) < 10:
         return 0
 
+    combined = f"{user_msg} {model_msg}"
+
+    # 1. 内輪ネタ・文脈依存の強い専門用語ペナルティ（居酒屋の隣の客テスト）
+    # 外の読者が前提知識なしで理解できない内部コード・設計用語が主役のものは即死または大幅減点
+    insider_keywords = [
+        "harness", "ハーネス", "voronoi", "ボロノイ", "deep seed", "surface voronoi",
+        "canon", "vcl", "yurelay", "atl", "gitv", "opl_quartz", "resvg", "cairosvg",
+        "sha256", "ハッシュ不整合", "型定義", "コンパイルエラー", "webpack", "tsconfig",
+        "pnpm", "git push", "git commit", "プルリク", "マージ"
+    ]
+    insider_count = sum(1 for kw in insider_keywords if kw in combined.lower())
+    if insider_count >= 2:
+        return 0  # 専門用語が2つ以上飛び交う会話は内輪ネタとして一発足切り
+
     score = 0
+
+    # 2. 人間の生々しい感情・やらかし・コント・怠惰キーワード（加点）
+    human_drama_keywords = [
+        "消えた", "消しちゃった", "消す", "消して", "忘れてた", "上書き", "全滅",
+        "怒られ", "神対応", "めんどくさ", "手ぶら", "呆れ", "吹いた", "噴いた",
+        "首根っこ", "襟首", "やらかし", "ヒヤリハット", "触る気", "危なっかしい"
+    ]
+    for kw in human_drama_keywords:
+        if kw in user_msg:
+            score += 4
+        elif kw in model_msg:
+            score += 2
+
+    # 3. 一般的な笑い・ツッコミ・摩擦
     humor_keywords = [
-        "ｗ", "草", "笑", "悪辣", "イタコ", "藻屑", "どんちゃん騒ぎ", "絶歌",
-        "ラヴ上等", "ハーネス", "配管", "バグ", "神", "さすが", "ちゃんこ",
-        "アホ", "漏れ", "事故", "せやな", "ほんま", "気づけ", "辛辣", "誰やねん",
+        "ｗ", "草", "笑", "悪辣", "藻屑", "どんちゃん騒ぎ",
+        "バグ", "神", "さすが", "アホ", "漏れ", "事故",
+        "せやな", "ほんま", "気づけ", "辛辣", "誰やねん",
         "動かない", "吹き飛ぶ", "即死", "願望", "自作自演"
     ]
     for kw in humor_keywords:
@@ -570,14 +598,19 @@ def score_turn_for_koneta(user_msg: str, model_msg: str, agent: str) -> int:
     if 10 <= len(user_msg) <= 100:
         score += 2
 
+    # キャラクター固有のリアクション（人間とAIの摩擦）
     if agent == "nagi" and ("ひぎィ" in model_msg or "ボゴォ" in model_msg or "プロペラ" in model_msg):
         score += 3
     elif agent == "yura" and ("ぐうの音も出ん" in model_msg or "気づけユラ" in model_msg or "ゾクゾク" in model_msg or "誰やねん" in user_msg or "辛辣" in user_msg):
         score += 3
-    elif agent == "sumi" and ("ちゃんこ" in model_msg or "抜く推し" in model_msg or "秒で" in model_msg or "事故要因" in model_msg):
+    elif agent == "sumi" and ("秒で" in model_msg or "事故要因" in model_msg or "どうして" in model_msg or "正座" in model_msg):
         score += 3
 
-    return score
+    # 内輪単語が1つでも混ざっていたらスコアを減点（一般的な面白さで相殺できない限り浮上させない）
+    if insider_count == 1:
+        score -= 3
+
+    return max(0, score)
 
 
 def synthesize_phenomenon_title(u_msg: str, m_msg: str, agent: str) -> str:

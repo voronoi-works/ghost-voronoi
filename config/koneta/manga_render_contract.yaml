@@ -1,4 +1,4 @@
-﻿schema_version: "1.1.0"
+schema_version: "1.1.0"
 profile_version: "2026-08-30"
 source_release: "v5.1.3_20260819"
 
@@ -24,6 +24,7 @@ character_invariants:
 
 rules:
   - "Strictly exactly ONE clear Japanese comic speech bubble per panel (absolutely no secondary, duplicate, or empty bubbles)."
+  - "Aiming invariant: position bubble on the opposite side of the speaker (left speaker -> bubble_x: 230-260, target_x: 110-140, tail_side: left; right speaker -> bubble_x: 100-130, target_x: 520-550, tail_side: right) to completely prevent vertical-down tail collapse."
   - "Use verbatim recorded dialogue from logs; do not invent server plots or generic AI tropes."
   - "Preserve exact character invariants; do not turn Captain into a humanoid or 2-eyed robot, and strictly keep 6 legs."
   - "Panel reading order is standard 2x2: top-left (Panel 1) -> top-right (Panel 2) -> bottom-left (Panel 3) -> bottom-right (Panel 4)."

@@ -1,0 +1,75 @@
+{
+  "title": "「なんでスクリプト新しく書く必要あんのよ」",
+  "font_size": 20,
+  "line_height": 32,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "全3話一括処理のカッコいい"
+        },
+        {
+          "text": "スクリプト新しく書きました！✨"
+        }
+      ],
+      "font_size": 16,
+      "line_height": 28,
+      "bubble_x": 240,
+      "bubble_y": 30,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "……字幕画面からはみ出とるし"
+        },
+        {
+          "text": "目の横にLED浮いとるやんけ"
+        }
+      ],
+      "font_size": 16,
+      "line_height": 28,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "なんでスクリプト"
+        },
+        {
+          "text": "新しく書く必要あんのよｗ"
+        }
+      ],
+      "font_size": 17,
+      "line_height": 29,
+      "bubble_x": 110,
+      "bubble_y": 35,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ひぎィィィッ……！！ ほんまそれです！"
+        },
+        {
+          "text": "完全にぐうの音も出ませんッ！！ｗｗ"
+        }
+      ],
+      "font_size": 15,
+      "line_height": 26,
+      "bubble_x": 230,
+      "bubble_y": 30,
+      "target_x": 130,
+      "target_y": 190,
+      "tail_side": "left"
+    }
+  ]
+}

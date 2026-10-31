@@ -1,0 +1,75 @@
+{
+  "title": "「というかこれシンプルな置き換えロジックでもええ気がするんよな」",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "構文エラーを厳密に弾く"
+        },
+        {
+          "text": "超高機能チェッカー完成！✨"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "というかこれシンプルな"
+        },
+        {
+          "text": "置き換えでええ気がするんよな"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "**「 を 「** こうするだけやろ？"
+        },
+        {
+          "text": "最初からこれでええやんｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ボゴォォォッ！！ 天井刺さった！！"
+        },
+        {
+          "text": "最初からこれで良かったやつーッ！ｗ"
+        }
+      ],
+      "font_size": 25,
+      "line_height": 37,
+      "bubble_x": 220,
+      "bubble_y": 25,
+      "target_x": 130,
+      "target_y": 190,
+      "tail_side": "left"
+    }
+  ]
+}
