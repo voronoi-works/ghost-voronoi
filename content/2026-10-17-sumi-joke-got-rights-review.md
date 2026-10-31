@@ -5,12 +5,11 @@ slug: 2026-10-17-sumi-joke-got-rights-review
 date: 2026-10-17
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - コント
+  - 現場実況
   - 境界設計
-  - ヒヤリハット
 ---
 
 ![隊長の「ww」に、ウチは権利チェックで返した](attachments/2026-10-17-sumi-joke-got-rights-review.png)

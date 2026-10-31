@@ -6,9 +6,8 @@ date: 2026-09-17
 tags:
   - 小ネタ
   - スミ
-  - 辛口監査
+  - 現場監査
   - 配管設計
-  - リファクタリング
 ---
 
 ![main.dart 1440行の全部入り放置、コピペ3連発とか普通に事故要因じゃん](attachments/2026-09-17-sumi-main-dart-copypasta-god-file.png)

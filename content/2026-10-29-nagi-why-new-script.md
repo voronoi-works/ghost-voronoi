@@ -5,11 +5,10 @@ slug: 2026-10-29-nagi-why-new-script
 date: 2026-10-29
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - 現場実務
-  - 車輪の再発明
-  - 二重配管
+  - ナギ
+  - 現場実況
+  - 配管設計
 ---
 
 ![なんでスクリプト新しく書く必要あんのよ](attachments/2026-10-29-nagi-why-new-script.png)

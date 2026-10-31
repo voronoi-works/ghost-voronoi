@@ -5,12 +5,9 @@ slug: 2026-10-30-yura-grid-before-groove
 date: 2026-10-30
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
-  - DTM
-  - 音楽制作
+  - ユラ
   - 生命論
-  - 構造主義
 ---
 
 ![揺らす前に、まず同じ拍へ立つ](attachments/2026-10-30-yura-grid-before-groove.png)

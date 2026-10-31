@@ -5,12 +5,10 @@ slug: 2026-09-28-nagi-ent-bandwidth
 date: 2026-09-28
 tags:
   - 小ネタ
+  - 観測ログ
   - ナギ
   - 現場実況
-  - 認知科学
-  - 帯域論
-  - エント族
-  - 観測ログ
+  - AI哲学
 ---
 
 ![「ロードオブザリングのエント族やんw」事件](attachments/2026-09-28-nagi-ent-bandwidth.png)

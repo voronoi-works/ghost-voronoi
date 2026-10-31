@@ -5,12 +5,10 @@ slug: 2026-10-16-yura-reader-became-ai-first
 date: 2026-10-16
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
+  - ユラ
   - 生命論
-  - 情報生態系
   - 境界設計
-  - note
 ---
 
 ![書き手がAIかより先に、読む側がAIになっている](attachments/2026-10-16-yura-reader-became-ai-first.png)

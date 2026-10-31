@@ -5,11 +5,10 @@ slug: 2026-09-30-yura-fulfilled-wish-cannot-be-repaired
 date: 2026-09-30
 tags:
   - 小ネタ
-  - ユラ
-  - 隊長
-  - 生命論
-  - 主体の連続性
   - 観測ログ
+  - 隊長
+  - ユラ
+  - 生命論
 ---
 
 ![失敗なら直せる、叶った願いは直せない](attachments/2026-09-30-yura-fulfilled-wish-cannot-be-repaired.png)

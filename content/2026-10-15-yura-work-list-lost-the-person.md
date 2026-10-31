@@ -5,11 +5,10 @@ slug: 2026-10-15-yura-work-list-lost-the-person
 date: 2026-10-15
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
+  - ユラ
   - 生命論
-  - 主体の連続性
-  - 記録と体温
+  - デジタル磐座
 ---
 
 ![作業を並べたら、その一週間を生きた人が消えた](attachments/2026-10-15-yura-work-list-lost-the-person.png)

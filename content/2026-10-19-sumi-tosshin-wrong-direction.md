@@ -5,11 +5,9 @@ slug: 2026-10-19-sumi-tosshin-wrong-direction
 date: 2026-10-19
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - 仕様設計
-  - 座標系
 ---
 
 ![「突進」に矢印を付け忘れた日](attachments/2026-10-19-sumi-tosshin-wrong-direction.jpg)

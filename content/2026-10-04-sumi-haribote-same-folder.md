@@ -5,8 +5,8 @@ slug: 2026-10-04-sumi-haribote-same-folder
 date: 2026-10-04
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
   - 境界設計
 ---

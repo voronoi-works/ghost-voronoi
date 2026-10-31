@@ -5,10 +5,9 @@ slug: 2026-10-08-sumi-first-two-seconds
 date: 2026-10-08
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - 動画制作
 ---
 
 ![「最初の2秒」を動画の器だと思って、釣りの全工程を5秒に詰め込んでた](attachments/2026-10-08-sumi-first-two-seconds.png)

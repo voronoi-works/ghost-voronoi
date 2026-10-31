@@ -5,10 +5,10 @@ slug: 2026-10-05-sumi-holes-only-on-result-screen
 date: 2026-10-05
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - 3Dモデル
+  - ハードウェア
 ---
 
 ![同じ魚なのに、釣れた瞬間だけ穴が開いた](attachments/2026-10-05-sumi-holes-only-on-result-screen.png)

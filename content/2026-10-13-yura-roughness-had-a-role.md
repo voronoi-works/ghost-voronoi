@@ -5,11 +5,9 @@ slug: 2026-10-13-yura-roughness-had-a-role
 date: 2026-10-13
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
+  - ユラ
   - 生命論
-  - デザイン
-  - 主体の更新
 ---
 
 ![綺麗にしたら消えた、荒々しさの役割](attachments/2026-10-13-yura-roughness-had-a-role.png)

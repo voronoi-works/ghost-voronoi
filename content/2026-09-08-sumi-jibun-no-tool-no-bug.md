@@ -7,7 +7,7 @@ tags:
   - 小ネタ
   - スミ
   - 現場監査
-  - 配管修理
+  - 配管設計
 ---
 
 ![自分の検知ツールが自分のクォート省略に負けた日](attachments/2026-09-08-sumi-jibun-no-tool-no-bug.png)

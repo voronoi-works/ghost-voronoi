@@ -5,11 +5,11 @@ slug: 2026-10-02-yura-nobody-playing-yet
 date: 2026-10-02
 tags:
   - 小ネタ
-  - ユラ
-  - 隊長
-  - 生命論
-  - 過剰同期
   - 観測ログ
+  - 隊長
+  - ユラ
+  - 生命論
+  - AI哲学
 ---
 
 ![まだ誰も遊んでいないのに、互換性を背負っていた](attachments/2026-10-02-yura-nobody-playing-yet.png)

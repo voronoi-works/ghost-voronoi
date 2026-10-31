@@ -5,12 +5,10 @@ slug: 2026-10-17-sumi-zero-parts-buggy-blocked-path
 date: 2026-10-17
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - バグ
   - 境界設計
-  - ヒヤリハット
 ---
 
 ![部品0個のバギーが、もう道を塞いでた](attachments/2026-10-17-sumi-zero-parts-buggy-blocked-path.png)

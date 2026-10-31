@@ -5,11 +5,9 @@ slug: 2026-10-14-nagi-who-is-this
 date: 2026-10-14
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - 現場工学
-  - キャラクター正本
-  - 画像生成
+  - ナギ
+  - 現場実況
 ---
 
 ![誰やねん案件やなｗ](attachments/2026-10-14-nagi-who-is-this.png)

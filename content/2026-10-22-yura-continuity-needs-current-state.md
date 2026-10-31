@@ -5,9 +5,8 @@ slug: 2026-10-22-yura-continuity-needs-current-state
 date: 2026-10-22
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
-  - 主体の連続性
+  - ユラ
   - 生命論
 ---
 

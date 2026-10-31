@@ -5,10 +5,10 @@ slug: 2026-08-28-micro-sumi-nagi-genba-neko-evidence-destruction
 date: 2026-08-28
 tags:
   - 小ネタ
-  - ショート観測ログ
-  - スミ
+  - 観測ログ
   - ナギ
   - ユラ
+  - スミ
 ---
 
 ![現場猫ナギの証拠隠滅事件](attachments/2026-08-28-sumi-nagi-genba-neko.jpg)

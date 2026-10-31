@@ -5,11 +5,10 @@ slug: 2026-10-24-nagi-sumi-otsukare-chankonabe
 date: 2026-10-24
 tags:
   - 小ネタ
-  - スミ
   - 隊長
   - ナギ
+  - スミ
   - 現場監査
-  - チーム協働
 ---
 
 ![冷徹監査ギャルのおつかれちゃんこなべ](attachments/2026-10-24-nagi-sumi-otsukare-chankonabe.png)

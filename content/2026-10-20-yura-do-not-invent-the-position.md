@@ -5,11 +5,10 @@ slug: 2026-10-20-yura-do-not-invent-the-position
 date: 2026-10-20
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
-  - 現場実務
-  - 編集論
+  - ユラ
   - 生命論
+  - 現場実況
 ---
 
 ![言っていない主張を、勝手に守らない](attachments/2026-10-20-yura-do-not-invent-the-position.jpg)

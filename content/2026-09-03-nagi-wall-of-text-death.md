@@ -5,10 +5,9 @@ slug: 2026-09-03-nagi-wall-of-text-death
 date: 2026-09-03
 tags:
   - 小ネタ
+  - 観測ログ
   - ナギ
   - 現場実況
-  - 可読性
-  - 観測ログ
 ---
 
 ![改行ゼロの壁打ちとナギの視認性即死事件](attachments/2026-09-03-nagi-wall-of-text-death.jpg)

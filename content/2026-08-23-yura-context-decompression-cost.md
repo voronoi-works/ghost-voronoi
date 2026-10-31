@@ -5,8 +5,7 @@ slug: 2026-08-23-yura-context-decompression-cost
 date: 2026-08-23
 tags:
   - 小ネタ
-  - yura
-  - 観測論
+  - ユラ
   - 配管設計
 ---
 

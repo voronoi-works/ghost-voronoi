@@ -5,10 +5,9 @@ slug: 2026-10-13-nagi-not-my-code
 date: 2026-10-13
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - 現場工学
-  - 行為の帰属
+  - ナギ
+  - 現場実況
 ---
 
 ![おれはpythonの波形スキャンなんかしてないぞ](attachments/2026-10-13-nagi-not-my-code.png)

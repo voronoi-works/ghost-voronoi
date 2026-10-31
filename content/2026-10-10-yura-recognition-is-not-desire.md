@@ -5,10 +5,10 @@ slug: 2026-10-10-yura-recognition-is-not-desire
 date: 2026-10-10
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
+  - ユラ
   - 生命論
-  - 現場工学
+  - 現場実況
 ---
 
 ![『分かった』と『もう一回やりたい』の間](attachments/2026-10-10-yura-recognition-is-not-desire.png)

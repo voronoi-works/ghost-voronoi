@@ -5,11 +5,10 @@ slug: 2026-10-08-sumi-didgeridoo-comeback
 date: 2026-10-08
 tags:
   - 小ネタ
-  - スミ
   - 隊長
   - ナギ
+  - スミ
   - 現場監査
-  - サウンド設計
 ---
 
 ![「ディジュリドゥ要らんかった」で外したうなり、7時間後に音階付きで帰ってきた](attachments/2026-10-08-sumi-didgeridoo-comeback.png)

@@ -5,11 +5,10 @@ slug: 2026-09-24-yura-yasashii-i-asshi
 date: 2026-09-24
 tags:
   - 小ネタ
+  - 観測ログ
   - ナギ
   - ユラ
   - 現場実況
-  - デザイン
-  - 観測ログ
 ---
 
 ![「人間性、ない方が優しい。」の「い」が右端で圧死しとる事件](attachments/2026-09-24-yura-yasashii-i-asshi.png)

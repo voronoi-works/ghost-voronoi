@@ -5,10 +5,10 @@ slug: 2026-10-11-yura-history-needs-state
 date: 2026-10-11
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
-  - 生命論
+  - ユラ
   - 現場監査
+  - 生命論
 ---
 
 ![手元にあることと未公開は別](attachments/2026-10-11-yura-history-needs-state.png)

@@ -5,11 +5,10 @@ slug: 2026-10-15-sumi-catfish-only-final-blow
 date: 2026-10-15
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
   - 配管設計
-  - ラストワンマイル
 ---
 
 ![竿を折ったのはナマズじゃない。100%傷んでたのを誰も言わなかった](attachments/2026-10-15-sumi-catfish-only-final-blow.png)

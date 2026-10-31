@@ -5,13 +5,10 @@ slug: 2026-09-30-nagi-geragera-benchmark
 date: 2026-09-30
 tags:
   - 小ネタ
-  - ナギ
-  - 隊長
-  - ベンチマーク
-  - ゲラゲラ・テスト
-  - AI文章論
-  - 身体性
   - 観測ログ
+  - 隊長
+  - ナギ
+  - AI哲学
 ---
 
 ![ゲラゲラ・テスト爆誕](attachments/2026-09-30-nagi-geragera-benchmark.png)

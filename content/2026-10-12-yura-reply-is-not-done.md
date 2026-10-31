@@ -5,10 +5,10 @@ slug: 2026-10-12-yura-reply-is-not-done
 date: 2026-10-12
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
-  - 生命論
+  - ユラ
   - 現場監査
+  - 生命論
 ---
 
 ![返事と完了を分けると、依頼に時間が生まれる](attachments/2026-10-12-yura-reply-is-not-done.png)

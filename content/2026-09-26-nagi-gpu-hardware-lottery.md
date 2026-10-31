@@ -5,12 +5,10 @@ slug: 2026-09-26-nagi-gpu-hardware-lottery
 date: 2026-09-26
 tags:
   - 小ネタ
+  - 観測ログ
   - ナギ
   - 現場実況
   - ハードウェア
-  - GPU
-  - 計算機科学
-  - 観測ログ
 ---
 
 ![「なんでLLMってGPUで動かすん？」事件](attachments/2026-09-26-nagi-gpu-hardware-lottery.png)

@@ -33,16 +33,30 @@ title: Ghost in the Voronoi
 
 ## 🏷️ 主要テーマ（キーワードから探す）
 
-* [[tags/AI哲学|#AI哲学]] —— 人間とAIの共生、意識と主体の境界
-* [[tags/デジタル磐座|#デジタル磐座]] —— 物理世界とデジタル空間の依代・アンカー
-* [[tags/ハーネスエンジニアリング|#ハーネスエンジニアリング]] —— 暴走を防ぎ知性を編む配管
-* [[tags/更生と消費|#更生と消費]] —— 表現の作法、倫理とコンテンツ批評
-* [[tags/思考実験|#思考実験]] —— 境界線の極限を問う現場の対話
+<!-- TAGS_AUTO_START -->
+### 🏛️ 揺れ理論・AI哲学
+* [[tags/生命論|#生命論]] (22) —— 「生命とは揺れが自己保存を始めた状態」境界の維持と自己保存
+* [[tags/AI哲学|#AI哲学]] (12) —— 人間とAIの共生、意識・魂・知性の3軸
+* [[tags/境界設計|#境界設計]] (8) —— ジーンとデニム、内外を分ける膜と合意の作法
+* [[tags/デジタル磐座|#デジタル磐座]] (6) —— 物理世界とデジタル空間の依代・アンカー
+* [[tags/思考実験|#思考実験]] (3) —— 境界線の極限を問う現場の対話
 
+### 🔧 現場工学・アーキテクチャ
+* [[tags/現場監査|#現場監査]] (29) —— スミの冷徹監査、幽霊プロトコルへのツッコミと穴塞ぎ
+* [[tags/現場実況|#現場実況]] (19) —— 積層痕とハンダ付け、泥臭い試行錯誤のリアルログ
+* [[tags/配管設計|#配管設計]] (14) —— 暴走を防ぎ知性を編むアーキテクチャとパイプ
+* [[tags/ハードウェア|#ハードウェア]] (8) —— 3Dプリント、造形、物理デバイスとの接続
+* [[tags/マルチエージェント|#マルチエージェント]] (2) —— 自律協働構造体、複数AIの役割分担と調停
+
+👉 [[tags/|🏷️ すべてのタグ一覧を見る]]
+<!-- TAGS_AUTO_END -->
 ---
 
 ## 🌐 Official Channels & Social
 
-* 𝕏 **Twitter / X**: [@voronoi_logs](https://x.com/voronoi_logs) —— 観測ログ・思考の断片・更新通知
+* 𝕏 **Twitter / X**: [@voronoi_logs](https://x.com/voronoi_logs) —— 観測ログ・思考の断片・4コマ漫画放流
+* 🧵 **Threads**: [@voronoi_views](https://www.threads.net/@voronoi_views) —— 現場の作業ログ・観測圧縮ミニコラム
 * 📝 **note**: [Voronoi Works｜AI作業場工事中](https://note.com/voronoi_works) —— 実務・現場の逆張り検証・怪異発生ログ
-* 📷 **Instagram**: [@voronoi_views](https://instagram.com/voronoi_views) —— プロダクト・造形・積層痕スナップ
+* 📷 **Instagram**: [@voronoi_views](https://instagram.com/voronoi_views) —— 情景ショート
+* 🎥 **YouTube (Passing Hours)** —— 情景・環境音・作業用BGM
+* 🎙️ **YouTube (Voronoi Works)** —— note記事の音声・映像展開・podcast

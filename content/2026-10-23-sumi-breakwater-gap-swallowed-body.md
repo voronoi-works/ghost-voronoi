@@ -5,10 +5,9 @@ slug: 2026-10-23-sumi-breakwater-gap-swallowed-body
 date: 2026-10-23
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - 物理バグ
 ---
 
 ![堤防の先っぽで隊長が身投げした](attachments/2026-10-23-sumi-breakwater-gap-swallowed-body.png)

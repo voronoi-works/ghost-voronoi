@@ -7,8 +7,7 @@ tags:
   - 小ネタ
   - ナギ
   - スミ
-  - 現場コント
-  - 開発史
+  - 現場実況
 ---
 
 ![gitも無いハーネスも無いノーヘル無免許原チャヤンキーと、手書きで回り続けたドラレコ](attachments/2026-09-02-nagi-sumi-yankee-drive-recorder.jpg)

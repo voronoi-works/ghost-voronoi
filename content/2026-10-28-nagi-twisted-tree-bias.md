@@ -5,11 +5,10 @@ slug: 2026-10-28-nagi-twisted-tree-bias
 date: 2026-10-28
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - 観測者バイアス
-  - 認知アーキテクチャ
+  - ナギ
   - 現場実況
+  - AI哲学
 ---
 
 ![ねじれた木が神々しいのは、観測する側の偏りやて](attachments/2026-10-28-nagi-twisted-tree-bias.png)

@@ -5,10 +5,9 @@ slug: 2026-10-26-sumi-companion-said-the-opposite
 date: 2026-10-26
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - テスト自動化
 ---
 
 ![テストは全部緑なのに、相棒がライギョに逆の指示を出してた](attachments/2026-10-26-sumi-companion-said-the-opposite.png)

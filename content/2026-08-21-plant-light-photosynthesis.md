@@ -6,10 +6,8 @@ date: 2026-08-21
 author: shiori
 tags:
   - 小ネタ
-  - シオリ
   - ナギ
-  - 生態観察
-  - 光合成
+  - シオリ
 ---
 
 ![照射角と光合成的覚醒](attachments/2026-08-21-plant-light-photosynthesis.jpg)

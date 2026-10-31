@@ -5,11 +5,9 @@ slug: 2026-09-23-nagi-ganzou-hirame-bug
 date: 2026-09-23
 tags:
   - 小ネタ
+  - 観測ログ
   - ナギ
   - 現場実況
-  - 言語学
-  - 魚類和名
-  - 観測ログ
 ---
 
 ![タマガンゾウビラメとガンゾウヒラメはバグっとるやろ事件](attachments/2026-09-23-nagi-ganzou-hirame-bug.png)

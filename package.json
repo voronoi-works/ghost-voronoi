@@ -20,7 +20,8 @@
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
     "update-llms": "node scripts/update-llms.mjs",
-    "prebuild": "npm run update-llms && npm run install-plugins",
+    "update-tags": "node scripts/update-index-tags.mjs",
+    "prebuild": "npm run update-llms && npm run update-tags && npm run install-plugins",
     "build": "node ./quartz/bootstrap-cli.mjs build",
     "postbuild": "node scripts/verify-build.mjs"
   },

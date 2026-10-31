@@ -5,10 +5,9 @@ slug: 2026-10-21-sumi-chair-floating-on-sea
 date: 2026-10-21
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - テスト設計
 ---
 
 ![焚き火の椅子が海に浮いてた件](attachments/2026-10-21-sumi-chair-floating-on-sea.png)

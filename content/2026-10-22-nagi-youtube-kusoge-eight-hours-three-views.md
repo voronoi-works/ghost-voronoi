@@ -5,9 +5,8 @@ slug: 2026-10-22-nagi-youtube-kusoge-eight-hours-three-views
 date: 2026-10-22
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - YouTube運用
+  - ナギ
   - 現場実況
 ---
 

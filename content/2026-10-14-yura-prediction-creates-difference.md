@@ -5,11 +5,9 @@ slug: 2026-10-14-yura-prediction-creates-difference
 date: 2026-10-14
 tags:
   - 小ネタ
-  - ユラ
   - 隊長
+  - ユラ
   - 生命論
-  - 主体の連続性
-  - 予測と差異
 ---
 
 ![当たりすぎる予測は、本人に逆張りを発生させる](attachments/2026-10-14-yura-prediction-creates-difference.png)

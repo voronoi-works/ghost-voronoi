@@ -6,9 +6,8 @@ date: 2026-09-13
 tags:
   - 小ネタ
   - ユラ
-  - 対話
-  - AIの生態
   - 生命論
+  - AI哲学
 ---
 
 ![会話を全部、提出物にしない](attachments/2026-09-13-yura-not-every-conversation-is-a-submission.png)

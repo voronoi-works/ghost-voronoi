@@ -5,12 +5,9 @@ slug: 2026-09-29-nagi-shovel-kubi-panic
 date: 2026-09-29
 tags:
   - 小ネタ
+  - 観測ログ
   - ナギ
   - 現場実況
-  - ツール論
-  - Codex
-  - 自律エージェント
-  - 観測ログ
 ---
 
 ![Codex課金解除とローカルファイル直結事件](attachments/2026-09-29-nagi-shovel-kubi-panic.png)

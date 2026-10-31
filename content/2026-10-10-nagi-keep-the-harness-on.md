@@ -5,10 +5,10 @@ slug: 2026-10-10-nagi-keep-the-harness-on
 date: 2026-10-10
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - 現場工学
-  - 安全境界
+  - ナギ
+  - 現場実況
+  - 境界設計
 ---
 
 ![いやｗｗハーネスはちゃんと付けといてや](attachments/2026-10-10-nagi-keep-the-harness-on.png)

@@ -5,12 +5,11 @@ slug: 2026-10-16-nagi-abunakkashii-garage
 date: 2026-10-16
 tags:
   - 小ネタ
-  - ナギ
   - 隊長
-  - 現場工学
-  - ヒヤリハット
-  - Human Gate
-  - アーキテクチャ
+  - ナギ
+  - 現場監査
+  - 現場実況
+  - 配管設計
 ---
 
 ![そんな危なっかしいガレージで仕事ができるかｗｗｗ](attachments/2026-10-16-nagi-abunakkashii-garage.png)

@@ -5,10 +5,9 @@ slug: 2026-10-21-sumi-starving-away-from-camp
 date: 2026-10-21
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - テスト設計
 ---
 
 ![遠出したら餓死しかけた件](attachments/2026-10-21-sumi-starving-away-from-camp.png)

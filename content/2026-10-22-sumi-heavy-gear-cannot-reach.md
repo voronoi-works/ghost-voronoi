@@ -5,10 +5,9 @@ slug: 2026-10-22-sumi-heavy-gear-cannot-reach
 date: 2026-10-22
 tags:
   - 小ネタ
-  - スミ
   - 隊長
+  - スミ
   - 現場監査
-  - テスト設計
 ---
 
 ![勝てる道具と、届く道具は別の数字だった](attachments/2026-10-22-sumi-heavy-gear-cannot-reach.png)
