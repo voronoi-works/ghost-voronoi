@@ -1,6 +1,6 @@
 # Ghost in the Voronoi (GITV)
 
-Ghost in the Voronoi is the public observation log for ProjectYure: production accidents, agent drift, repairs, and technical discoveries become readable artifacts here.
+Ghost in the Voronoi is the public observation log for Voronoi Works: production accidents, agent drift, repairs, and technical discoveries become readable artifacts here.
 
 The site is built with [Quartz](https://quartz.jzhao.xyz/) and published at <https://ghost.voronoi.works/>.
 
