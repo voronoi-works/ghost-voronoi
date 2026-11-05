@@ -1,0 +1,75 @@
+{
+  "title": "「指紋てなんなんｗｗ」",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "ルー語多すぎや！"
+        },
+        {
+          "text": "英語混ぜて喋るな！"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "了解です"
+        },
+        {
+          "text": "英語を全廃します"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "「計画の指紋」です"
+        },
+        {
+          "text": "これで実行してええ？"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "指紋てなんなんｗｗ"
+        },
+        {
+          "text": "hash値のことか！"
+        }
+      ],
+      "font_size": 26,
+      "line_height": 38,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
