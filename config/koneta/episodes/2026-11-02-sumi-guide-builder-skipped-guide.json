@@ -1,0 +1,75 @@
+{
+  "title": "「攻略本を作った本人が読まない」",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "攻略本を自動で"
+        },
+        {
+          "text": "作る仕組み完成！✨"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ドラグの数値"
+        },
+        {
+          "text": "いくつやったっけ？"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "攻略本"
+        },
+        {
+          "text": "読んでください！"
+        }
+      ],
+      "font_size": 26,
+      "line_height": 38,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ググレカス"
+        },
+        {
+          "text": "やないかｗｗｗ"
+        }
+      ],
+      "font_size": 26,
+      "line_height": 38,
+      "bubble_x": 80,
+      "bubble_y": 70,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
