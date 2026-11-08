@@ -1,0 +1,75 @@
+{
+  "title": "「ChatGPTがデバッグを開始しました」",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "ん？画面の上に…"
+        },
+        {
+          "text": "デバッグ開始バナー？"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "隊長！乗っ取り！？"
+        },
+        {
+          "text": "今すぐ切って！"
+        }
+      ],
+      "font_size": 26,
+      "line_height": 38,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "別タブで作業"
+        },
+        {
+          "text": "やらせとるだけやｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "身内じゃん……"
+        },
+        {
+          "text": "先に言うてよ！"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    }
+  ]
+}
