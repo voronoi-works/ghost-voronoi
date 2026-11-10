@@ -1,0 +1,75 @@
+{
+  "title": "同期するのにメモ帳開いたんはなんでなんｗ",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "noteの本文5本"
+        },
+        {
+          "text": "控えを取るね"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "メモ帳を開いて…"
+        },
+        {
+          "text": "全部ペタッと！"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "同期するのに"
+        },
+        {
+          "text": "メモ帳開いたん何でｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "その場しのぎの"
+        },
+        {
+          "text": "受け渡し方やねｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 230,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    }
+  ]
+}
