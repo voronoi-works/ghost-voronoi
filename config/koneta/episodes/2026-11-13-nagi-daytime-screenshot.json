@@ -1,0 +1,75 @@
+{
+  "title": "1枚目のスクショはほんとに昼に撮ったやつやから時間ズレてて当たり前やろww",
+  "font_size": 24,
+  "line_height": 36,
+  "panels": [
+    {
+      "dialogue": [
+        {
+          "text": "画面の時計ズレ"
+        },
+        {
+          "text": "キャッシュバグです！"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 240,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "1枚目のスクショ"
+        },
+        {
+          "text": "昼に撮ったやつやぞw"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "ひぎィィッ！！"
+        },
+        {
+          "text": "ほんまの昼だった！？"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 240,
+      "bubble_y": 25,
+      "target_x": 120,
+      "target_y": 190,
+      "tail_side": "left"
+    },
+    {
+      "dialogue": [
+        {
+          "text": "時間ズレてて"
+        },
+        {
+          "text": "当たり前やろｗｗ"
+        }
+      ],
+      "font_size": 24,
+      "line_height": 36,
+      "bubble_x": 100,
+      "bubble_y": 30,
+      "target_x": 530,
+      "target_y": 200,
+      "tail_side": "right"
+    }
+  ]
+}
