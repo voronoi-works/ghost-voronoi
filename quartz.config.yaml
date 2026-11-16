@@ -5,9 +5,8 @@ configuration:
   enableSPA: true
   enablePopovers: true
   analytics:
-    provider: umami
-    host: https://cloud.umami.is
-    websiteId: "2e510d81-2dc1-42c0-9ba5-243f211636ac"
+    provider: google
+    tagId: "G-Q1764JCZBL"
 
 
   locale: ja-JP
@@ -221,6 +220,7 @@ plugins:
       links:
         "Twitter / X": https://x.com/voronoi_logs
         "Instagram": https://instagram.com/voronoi_views
+        "プライバシー": https://voronoi.works/privacy.html
   - source: github:quartz-community/recent-notes
     enabled: true
     options:

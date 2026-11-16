@@ -92,24 +92,38 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
+    const hostname = cfg.baseUrl?.split("/")[0]
     componentResources.afterDOMLoaded.push(`
-      const gtagScript = document.createElement('script');
-      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=${tagId}';
-      gtagScript.defer = true;
-      gtagScript.onload = () => {
+      (() => {
+        if (location.protocol !== 'https:' || location.hostname !== ${JSON.stringify(hostname)}) return;
         window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
+        function gtag() { window.dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', '${tagId}', { send_page_view: false });
-        gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
-        document.addEventListener('nav', () => {
-          gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+        gtag('config', ${JSON.stringify(tagId)}, {
+          send_page_view: false,
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false
         });
-      };
-      
-      document.head.appendChild(gtagScript);
+
+        let previousPage;
+        function recordPageView() {
+          const page = location.origin + location.pathname + location.search;
+          if (page === previousPage) return;
+          gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: page,
+            page_referrer: previousPage || document.referrer
+          });
+          previousPage = page;
+        }
+        recordPageView();
+        document.addEventListener('nav', recordPageView);
+
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + ${JSON.stringify(tagId)};
+        document.head.appendChild(gtagScript);
+      })();
     `)
   } else if (cfg.analytics?.provider === "plausible") {
     const plausibleHost = cfg.analytics.host ?? "https://plausible.io"
