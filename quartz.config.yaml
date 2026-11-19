@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics:
     provider: google
-    tagId: "G-Q1764JCZBL"
+    tagId: "G-2ZJC7MJM63"
 
 
   locale: ja-JP
